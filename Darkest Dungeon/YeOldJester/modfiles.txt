@@ -1,0 +1,4 @@
+heroes/jester/jester.info.darkest 7579
+effects/base.effects.darkest 194916
+preview_icon.png 172822
+project.xml 644

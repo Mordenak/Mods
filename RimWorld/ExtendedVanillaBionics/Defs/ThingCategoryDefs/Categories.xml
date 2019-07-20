@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!--Prostheses-->
+
+	<ThingCategoryDef>
+		<defName>Cybernetics</defName>
+		<label>cybernetics</label>
+		<parent>BodyPartsArtificial</parent>
+	</ThingCategoryDef>
+   
+	<ThingCategoryDef>
+		<defName>CyberneticImplants</defName>
+		<label>cybernetic implants</label>
+		<parent>BodyPartsArtificial</parent>
+	</ThingCategoryDef>
+
+  
+</Defs>

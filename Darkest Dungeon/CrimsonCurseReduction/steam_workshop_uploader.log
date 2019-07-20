@@ -1,0 +1,26 @@
+
+-------------------------------------------------------------------------------
+Parsing project file - E:\DD_Archive\CrimsonCurseReduction\project.xml
+Mod Data Directory = E:/DD_Archive/CrimsonCurseReduction/
+
+Creating new item...
+....Created
+
+-------------------------------------------------------------------------------
+Processing Map Files files...
+
+-------------------------------------------------------------------------------
+Searching for preview icon file E:/DD_Archive/CrimsonCurseReduction/preview_icon.png...NOT FOUND! - Copying default preview icon to mod directory
+<UploadMode> - Set to direct_upload
+
+
+-------------------------------------------------------------------------------
+Modded files...
+
+dlc/580100_crimson_court/features/crimson_court/effects/crimson_court.effects.darkest
+preview_icon.png
+project.xml
+
+Submitting...................................................................................Submitted.
+Saving project file E:\DD_Archive\CrimsonCurseReduction\project.xml
+

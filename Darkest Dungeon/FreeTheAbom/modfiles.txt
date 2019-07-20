@@ -1,0 +1,4 @@
+heroes/abomination/abomination.info.darkest 9405
+modfiles.txt 125
+preview_icon.png 172822
+project.xml 708

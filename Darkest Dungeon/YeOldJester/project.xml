@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+	<PreviewIconFile>preview_icon.png</PreviewIconFile>
+	<ItemDescriptionShort/>
+	<ModDataPath>E:/DD_Archive/YeOldJester/</ModDataPath>
+	<Title>Ye Old Jester</Title>
+	<Language>english</Language>
+	<UpdateDetails/>
+	<Visibility>private</Visibility>
+	<UploadMode>direct_upload</UploadMode>
+	<VersionMajor>0</VersionMajor>
+	<VersionMinor>1</VersionMinor>
+	<TargetBuild>20229</TargetBuild>
+	<Tags>
+		<Tags>Class Tweaks</Tags>
+	</Tags>
+	<ItemDescription>Simple mod that brings the Jester back prior to the build 20222 changes.</ItemDescription>
+	<PublishedFileId>959837627</PublishedFileId>
+</project>
+

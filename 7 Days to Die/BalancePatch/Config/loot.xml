@@ -1,0 +1,27 @@
+<configs>
+
+<!-- Examples
+	<insertBefore xpath="/lootcontainers/lootgroup[@name='questChallenge']">
+
+		<lootgroup name="luger" count="all">
+			<item name="Luger" count="1"/>
+			<item name="9x19mm Bullet" count="8,24"/>
+		</lootgroup>
+
+	</insertBefore>
+
+	<append xpath="/lootcontainers/lootcontainer[@id='6']">	
+		<item group="luger" count="1" prob="0.6"/>	
+	</append>
+-->
+
+	<append xpath="/lootcontainers/lootgroup[@name='modGunT2']">
+		<item name="modGunSteelHammer"/>
+		<item name="modGunBowHighTensionString"/>
+	</append>
+
+	<append xpath="/lootcontainers/lootgroup[@name='modGunT3']">
+		<item name="modGunTitaniumHammer"/>
+	</append>
+
+</configs>

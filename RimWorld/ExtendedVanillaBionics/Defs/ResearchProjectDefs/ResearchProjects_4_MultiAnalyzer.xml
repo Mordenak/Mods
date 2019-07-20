@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ResearchProjectDef>
+    <defName>Cybernetics</defName>
+    <label>cybernetics</label>
+    <description>Build high-tech bionic body parts to replace lost limbs and eyes. Requires a skilled doctor to attach.</description>
+    <baseCost>6000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>Prosthetics</li>
+      <li>Fabrication</li>
+      <li>Bionics</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+    <researchViewX>14</researchViewX>
+    <researchViewY>4.8</researchViewY>
+  </ResearchProjectDef>
+
+</Defs>

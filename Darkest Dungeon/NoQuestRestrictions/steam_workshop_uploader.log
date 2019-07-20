@@ -1,0 +1,27 @@
+
+-------------------------------------------------------------------------------
+Parsing project file - E:\DD_Archive\NoQuestRestrictions\project.xml
+Mod Data Directory = E:/DD_Archive/NoQuestRestrictions/
+
+Creating new item...
+....Created
+
+-------------------------------------------------------------------------------
+Processing Map Files files...
+
+-------------------------------------------------------------------------------
+Searching for preview icon file E:/DD_Archive/NoQuestRestrictions/preview_icon.png...FOUND!
+<UploadMode> - Set to direct_upload
+
+
+-------------------------------------------------------------------------------
+Modded files...
+
+campaign/quest/quest.restriction.json
+modfiles.txt
+preview_icon.png
+project.xml
+
+Submitting................................................................Submitted.
+Saving project file E:\DD_Archive\NoQuestRestrictions\project.xml
+

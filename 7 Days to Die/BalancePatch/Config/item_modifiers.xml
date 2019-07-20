@@ -1,0 +1,32 @@
+<configs>	
+	<append xpath="/item_modifiers">
+
+		<item_modifier name="modGunSteelHammer" installable_tags="gun" type="attachment">
+			<property name="Stacknumber" value="1"/>
+			<property name="CustomIcon" value="modGunTriggerGroupBurst"/>
+			<property name="CustomIconTint" value="190,190,190"/>
+			<effect_group tiered="false">
+				<passive_effect name="EntityDamage" operation="perc_add" value=".3"/>
+			</effect_group>
+		</item_modifier>
+
+		<item_modifier name="modGunTitaniumHammer" installable_tags="gun" type="attachment">
+			<property name="Stacknumber" value="1"/>
+			<property name="CustomIcon" value="modGunTriggerGroupBurst"/>
+			<property name="CustomIconTint" value="130,130,130"/>
+			<effect_group tiered="false">
+				<passive_effect name="EntityDamage" operation="perc_add" value=".6"/>
+			</effect_group>
+		</item_modifier>
+
+		<item_modifier name="modGunBowHighTensionString" installable_tags="bow" type="attachment">
+			<property name="Stacknumber" value="1"/>
+			<property name="CustomIcon" value="modGunBowPolymerString"/>
+			<property name="CustomIconTint" value="150,150,150"/>
+			<effect_group tiered="false">
+				<passive_effect name="EntityDamage" operation="perc_add" value=".5"/>
+			</effect_group>
+		</item_modifier>
+
+	</append>
+</configs>

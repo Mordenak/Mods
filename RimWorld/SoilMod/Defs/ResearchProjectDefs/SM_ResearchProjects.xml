@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ResearchProjectDef>
+		<defName>stoneToSoil</defName>
+		<label>Stone to Soil</label>
+		<description>Allows you to break stone and fill with soil instead.</description>
+		<baseCost>2000</baseCost>
+		<techLevel>Medieval</techLevel>
+		<prerequisites></prerequisites>
+	</ResearchProjectDef>
+
+</Defs>

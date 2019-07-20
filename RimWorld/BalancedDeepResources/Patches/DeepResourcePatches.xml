@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<!-- RW Defaults: 
+		Plasteel: 7
+		Others: 10
+	-->
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>
+			/Defs/ThingDef[defName="Plasteel" or defName="Gold" or defName="Uranium" or defName="Jade"]/deepCountPerPortion
+		</xpath>
+		<value>
+			<deepCountPerPortion>20</deepCountPerPortion>
+		</value>
+	</Operation>
+
+</Patch>

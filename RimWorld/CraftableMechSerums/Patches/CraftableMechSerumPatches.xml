@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationInsert">
+		<xpath>
+			/Defs/ThingDef[defName = "MechSerumHealer"]/graphicData
+		</xpath>
+		<value>
+			<recipeMaker>
+				<skillRequirements>
+					<Crafting>15</Crafting>
+				</skillRequirements>
+				<researchPrerequisite>Bionics</researchPrerequisite>
+				<recipeUsers Inherit="False">
+					<li>DrugLab</li>
+				</recipeUsers>
+			</recipeMaker>
+			<costList>
+				<Uranium>100</Uranium>
+				<ComponentSpacer>10</ComponentSpacer>
+				<Neutroamine>200</Neutroamine>
+			</costList>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationInsert">
+		<xpath>
+			/Defs/ThingDef[defName = "MechSerumResurrector"]/graphicData
+		</xpath>
+		<value>
+			<recipeMaker>
+				<skillRequirements>
+					<Crafting>20</Crafting>
+				</skillRequirements>
+				<researchPrerequisite>Bionics</researchPrerequisite>
+				<recipeUsers Inherit="False">
+					<li>DrugLab</li>
+				</recipeUsers>
+			</recipeMaker>
+			<costList>
+				<Uranium>250</Uranium>
+				<ComponentSpacer>20</ComponentSpacer>
+				<Neutroamine>500</Neutroamine>
+			</costList>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>
+			/Defs/ThingDef[defName = "MechSerumHealer" or defName = "MechSerumResurrector"]/statBases
+		</xpath>
+		<value>
+			<WorkToMake>15000</WorkToMake>
+			<Mass>0.1</Mass>
+		</value>
+	</Operation>
+
+
+</Patch>

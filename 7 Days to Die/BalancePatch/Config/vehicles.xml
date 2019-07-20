@@ -1,0 +1,12 @@
+<configs>
+
+	<!-- Make the motorcycle a little faster... -->
+	<set xpath="/vehicles/vehicle[@name='vehicleMotorcycle']/property[@name='velocityMax']/@value">17, 27</set>
+
+	<!-- Probably do the same for the Jeep -->
+	<set xpath="/vehicles/vehicle[@name='vehicle4x4Truck']/property[@name='velocityMax']/@value">20, 30</set>
+
+	<!-- And the Gyro... -->
+	<set xpath="/vehicles/vehicle[@name='vehicleGyrocopter']/property[@name='velocityMax']/@value">15, 25</set>
+
+</configs>

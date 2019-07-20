@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>StackMod</name>
+	<author>Mordenak</author>
+	<targetVersion>Alpha 13</targetVersion>
+  <description>Changes stack sizes to 500.</description>
+</ModMetaData>

@@ -1,0 +1,59 @@
+<configs>
+
+	<!-- Change PackMule to have all tiers purchaseable from Level 1 -->
+
+	<set xpath="/progression/perks/perk[@name='perkPackMule']/level_requirements/requirement/@desc_key">reqStrengthLevel1</set>
+	<set xpath="/progression/perks/perk[@name='perkPackMule']/level_requirements/requirement/@value">1</set>
+
+	<!-- Change Steel to Level 60? -->
+	<remove xpath="/progression/perks/perk[@name='perkHammerForge']/level_requirements[@level='4']/requirement[@name='PlayerLevel']" />
+	<append xpath="/progression/perks/perk[@name='perkHammerForge']/level_requirements[@level='4']">
+		<requirement name="PlayerLevel" operation="GTE" value="60" desc_key="reqAttributeLevelDummy"/>
+	</append>
+
+	<!-- And Update Tooltip?? -->
+	<remove xpath="/progression/perks/perk[@name='perkHammerForge']/level_requirements[@level='4']/requirement[@name='ProgressionLevel']" />
+	<append xpath="/progression/perks/perk[@name='perkHammerForge']/level_requirements[@level='4']">
+		<requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="8" desc_key="reqIntellectLevel08-60"/>
+	</append>
+
+	<!-- Change Armor to Level 80? -->
+	<remove xpath="/progression/perks/perk[@name='perkHammerForge']/level_requirements[@level='5']/requirement[@name='PlayerLevel']" />
+	<append xpath="/progression/perks/perk[@name='perkHammerForge']/level_requirements[@level='5']">
+		<requirement name="PlayerLevel" operation="GTE" value="80" desc_key="reqAttributeLevelDummy"/>
+	</append>
+
+	<!-- And Update Tooltip?? -->
+	<remove xpath="/progression/perks/perk[@name='perkHammerForge']/level_requirements[@level='5']/requirement[@name='ProgressionLevel']" />
+	<append xpath="/progression/perks/perk[@name='perkHammerForge']/level_requirements[@level='5']">
+		<requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="10" desc_key="reqIntellectLevel10-80"/>
+	</append>
+
+	<!-- Change 4x4 to Level 80? -->
+	<remove xpath="/progression/perks/perk[@name='perkGreaseMonkey']/level_requirements[@level='4']/requirement[@name='PlayerLevel']" />
+	<append xpath="/progression/perks/perk[@name='perkGreaseMonkey']/level_requirements[@level='4']">
+		<requirement name="PlayerLevel" operation="GTE" value="80" desc_key="reqAttributeLevelDummy"/>
+	</append>
+
+	<!-- And Update Tooltip?? -->
+	<remove xpath="/progression/perks/perk[@name='perkGreaseMonkey']/level_requirements[@level='4']/requirement[@name='ProgressionLevel']" />
+	<append xpath="/progression/perks/perk[@name='perkGreaseMonkey']/level_requirements[@level='4']">
+		<requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="9" desc_key="reqIntellectLevel09-80"/>
+	</append>
+
+	<!-- Change Gyro to Level 100? -->
+	<remove xpath="/progression/perks/perk[@name='perkGreaseMonkey']/level_requirements[@level='5']/requirement[@name='PlayerLevel']" />
+	<append xpath="/progression/perks/perk[@name='perkGreaseMonkey']/level_requirements[@level='5']">
+		<requirement name="PlayerLevel" operation="GTE" value="100" desc_key="reqAttributeLevelDummy"/>
+	</append>
+
+	<!-- And Update Tooltip?? -->
+	<remove xpath="/progression/perks/perk[@name='perkGreaseMonkey']/level_requirements[@level='5']/requirement[@name='ProgressionLevel']" />
+	<append xpath="/progression/perks/perk[@name='perkGreaseMonkey']/level_requirements[@level='5']">
+		<requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="10" desc_key="reqIntellectLevel10-100"/>
+	</append>
+
+	<!-- Leveling points -->
+	<set xpath="/progression/level/@skill_points_per_level">3</set>
+
+</configs>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<!-- RW Defaults: 1
+	-->
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>
+			/Defs/StatDef[defName="MiningYield" or defName="PlantHarvestYield" or defName="AnimalGatherYield"]/maxValue
+		</xpath>
+		<value>
+			<maxValue>2</maxValue>
+		</value>
+	</Operation>
+
+	<!-- Fix Trade Impact -->
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>
+			/Defs/StatDef[defName="TradePriceImprovement"]/capacityFactors/li/max
+		</xpath>
+		<value>
+			<max>1.2</max>
+		</value>
+	</Operation>
+
+</Patch>

@@ -1,0 +1,288 @@
+<configs>
+
+	<!-- Wooden Bow -->
+	<remove xpath="/items/item[@name='gunWoodenBow']/effect_group/passive_effect[@name='EntityDamage']" />
+	<append xpath="/items/item[@name='gunWoodenBow']/effect_group">
+		<passive_effect name="EntityDamage" operation="perc_add" value="0,.25" tier="1,6"/>
+	</append>
+	
+	<!-- Compound Bow -->
+	<remove xpath="/items/item[@name='gunCompoundBow']/effect_group/passive_effect[@name='EntityDamage']" />
+	<append xpath="/items/item[@name='gunCompoundBow']/effect_group">
+		<passive_effect name="EntityDamage" operation="perc_add" value=".4,.65" tier="1,6"/>
+	</append>
+	<!-- Additional Compound Bow buffs -->
+	<remove xpath="/items/item[@name='gunCompoundBow']/effect_group/passive_effect[@name='ProjectileVelocity']" />
+	<append xpath="/items/item[@name='gunCompoundBow']/effect_group">
+		<passive_effect name="ProjectileVelocity" operation="perc_add" value=".6,.9" tier="1,6"/>
+	</append>
+	<!-- <set xpath="/items/item[@name='gunCompoundBow']/effect_group/passive_effect[@name='ProjectileVelocity']/@value">0.7</set> -->
+	<set xpath="/items/item[@name='gunCompoundBow']/property[@class='Action0']/property[@name='Delay']/@value">.8</set>
+
+	<!-- Crossbow -->
+	<remove xpath="/items/item[@name='gunCrossbow']/effect_group/passive_effect[@name='EntityDamage']" />
+	<append xpath="/items/item[@name='gunCrossbow']/effect_group">
+		<passive_effect name="EntityDamage" operation="perc_add" value=".3,.55" tier="1,6"/>
+	</append>
+
+	<!-- Pistol -->
+	<remove xpath="/items/item[@name='gunPistol']/effect_group/passive_effect[@name='EntityDamage']" />
+	<append xpath="/items/item[@name='gunPistol']/effect_group">
+		<passive_effect name="EntityDamage" operation="perc_add" value="0,.25" tier="1,6"/>
+	</append>
+
+	<!-- 44 -->
+	<remove xpath="/items/item[@name='gun44Magnum']/effect_group/passive_effect[@name='EntityDamage']" />
+	<append xpath="/items/item[@name='gun44Magnum']/effect_group">
+		<passive_effect name="EntityDamage" operation="perc_add" value="0,.25" tier="1,6"/>
+	</append>
+
+	<!-- SMG -->
+	<remove xpath="/items/item[@name='gunSMG5']/effect_group/passive_effect[@name='EntityDamage']" />
+	<append xpath="/items/item[@name='gunSMG5']/effect_group">
+		<passive_effect name="EntityDamage" operation="perc_add" value="-.2,.05" tier="1,6"/>
+	</append>
+
+	<!-- Blunderbuss -->
+	<remove xpath="/items/item[@name='gunBlunderbuss']/effect_group/passive_effect[@name='EntityDamage']" />
+	<append xpath="/items/item[@name='gunBlunderbuss']/effect_group">
+		<passive_effect name="EntityDamage" operation="perc_add" value="0,.25" tier="1,6"/>
+	</append>
+	
+	<!-- PumpShotgun -->
+	<remove xpath="/items/item[@name='gunPumpShotgun']/effect_group/passive_effect[@name='EntityDamage']" />
+	<append xpath="/items/item[@name='gunPumpShotgun']/effect_group">
+		<passive_effect name="EntityDamage" operation="perc_add" value="0,.25" tier="1,6"/>
+	</append>
+
+	<!-- HuntingRifle -->
+	<remove xpath="/items/item[@name='gunHuntingRifle']/effect_group/passive_effect[@name='EntityDamage']" />
+	<append xpath="/items/item[@name='gunHuntingRifle']/effect_group">
+		<passive_effect name="EntityDamage" operation="perc_add" value=".35,.6" tier="1,6"/>
+	</append>
+
+	<!-- MR10 -->
+	<remove xpath="/items/item[@name='gunMR10']/effect_group/passive_effect[@name='EntityDamage']" />
+	<append xpath="/items/item[@name='gunMR10']/effect_group">
+		<passive_effect name="EntityDamage" operation="perc_add" value=".25,.5" tier="1,6"/>
+	</append>
+
+	<!-- AK47 -->
+	<remove xpath="/items/item[@name='gunAK47']/effect_group/passive_effect[@name='EntityDamage']" />
+	<append xpath="/items/item[@name='gunAK47']/effect_group">
+		<passive_effect name="EntityDamage" operation="perc_add" value="-.2,.05" tier="1,6"/>
+	</append>
+
+	<!-- RocketLauncher -->
+	<remove xpath="/items/item[@name='gunRocketLauncher']/effect_group/passive_effect[@name='EntityDamage']" />
+	<append xpath="/items/item[@name='gunRocketLauncher']/effect_group">
+		<passive_effect name="EntityDamage" operation="perc_add" value="0,.25" tier="1,6"/>
+	</append>
+
+	<!-- Melee Weapons -->
+
+	<!-- Machete -->
+	<append xpath="/items/item[@name='meleeToolMachete']/effect_group[@name='Base Effects']">
+		<passive_effect name="EntityDamage" operation="perc_add" value="0,.25" tier="1,6" tags="primary"/>
+		<passive_effect name="BlockDamage" operation="perc_add" value="0,.25" tier="1,6" tags="primary"/>
+		<passive_effect name="StaminaLoss" operation="perc_add" value="0,-.1" tier="1,6" tags="primary"/>
+		<passive_effect name="AttacksPerMinute" operation="perc_add" value="0,.2" tier="1,6" tags="primary"/>
+	</append>
+	<append xpath="/items/item[@name='meleeToolMachete']/effect_group[@name='Power Attack']">
+		<passive_effect name="EntityDamage" operation="perc_add" value="1,1.25" tier="1,6" tags="secondary"/>
+		<passive_effect name="BlockDamage" operation="perc_add" value="1,1.25" tier="1,6" tags="secondary"/>
+		<passive_effect name="StaminaLoss" operation="perc_add" value="0,-.1" tier="1,6" tags="secondary"/>
+		<passive_effect name="AttacksPerMinute" operation="perc_add" value="0,.1" tier="1,6" tags="secondary"/>
+	</append>
+
+	<!-- Sledge Hammer -->
+	<append xpath="/items/item[@name='meleeToolSledgehammer']/effect_group[@name='Base Effects']">
+		<passive_effect name="EntityDamage" operation="perc_add" value="0,.25" tier="1,6" tags="primary"/>
+		<passive_effect name="BlockDamage" operation="perc_add" value="0,.25" tier="1,6" tags="primary"/>
+		<passive_effect name="StaminaLoss" operation="perc_add" value="0,-.1" tier="1,6" tags="primary"/>
+		<passive_effect name="AttacksPerMinute" operation="perc_add" value="0,.2" tier="1,6" tags="primary"/>
+	</append>
+	<append xpath="/items/item[@name='meleeToolSledgehammer']/effect_group[@name='Power Attack']">
+		<passive_effect name="EntityDamage" operation="perc_add" value="1,1.5" tier="1,6" tags="secondary"/>
+		<passive_effect name="BlockDamage" operation="perc_add" value="1,1.5" tier="1,6" tags="secondary"/>
+		<passive_effect name="StaminaLoss" operation="perc_add" value="0,-.1" tier="1,6" tags="secondary"/>
+		<passive_effect name="AttacksPerMinute" operation="perc_add" value="0,.1" tier="1,6" tags="secondary"/>
+	</append>
+
+	<!-- Gathering Tools -->
+
+	<!-- or @name='meleeToolMachete' or @name='meleeToolPickaxeIron' or @name='meleeToolWrench' -->
+
+	<!-- Stone Axe -->
+	<append xpath="/items/item[@name='meleeToolStoneAxe']/effect_group[@name='Base Effects']">
+		<passive_effect name="BlockDamage" operation="perc_add" value="0,.5" tier="1,6" tags="primary"/>
+		<passive_effect name="StaminaLoss" operation="perc_add" value="0,-.1" tier="1,6" tags="primary,secondary"/>
+		<passive_effect name="AttacksPerMinute" operation="perc_add" value="0,.3" tier="1,6" tags="primary,secondary"/>
+	</append>
+
+	<!-- Wrench -->
+	<append xpath="/items/item[@name='meleeToolWrench']/effect_group[@name='Base Effects']">
+		<passive_effect name="BlockDamage" operation="perc_add" value="0,.25" tier="1,6" tags="primary"/>
+		<passive_effect name="StaminaLoss" operation="perc_add" value="0,-.1" tier="1,6" tags="primary,secondary"/>
+		<passive_effect name="AttacksPerMinute" operation="perc_add" value="0,.2" tier="1,6" tags="primary,secondary"/>
+	</append>
+
+	<!-- Stone Shovel -->
+	<append xpath="/items/item[@name='meleeToolShovelStone']/effect_group[@name='Base Effects']">
+		<passive_effect name="EntityDamage" operation="perc_add" value="0,.5" tier="1,6" tags="primary"/>
+		<passive_effect name="BlockDamage" operation="perc_add" value="0,.5" tier="1,6" tags="primary"/>
+		<passive_effect name="StaminaLoss" operation="perc_add" value="0,-.1" tier="1,6" tags="primary"/>
+		<passive_effect name="AttacksPerMinute" operation="perc_add" value="0,.2" tier="1,6" tags="primary"/>
+	</append>
+	<append xpath="/items/item[@name='meleeToolShovelStone']/effect_group[@name='Power Attack']">
+		<passive_effect name="EntityDamage" operation="perc_add" value="1,1.5" tier="1,6" tags="secondary"/>
+		<passive_effect name="BlockDamage" operation="perc_add" value="1,1.5" tier="1,6" tags="secondary"/>
+		<passive_effect name="StaminaLoss" operation="perc_add" value="0,-.1" tier="1,6" tags="secondary"/>
+		<passive_effect name="AttacksPerMinute" operation="perc_add" value="0,.1" tier="1,6" tags="secondary"/>
+	</append>
+
+	<!-- Iron Pickaxe -->
+	<append xpath="/items/item[@name='meleeToolPickaxeIron']/effect_group[@name='Base Effects']">
+		<passive_effect name="EntityDamage" operation="perc_add" value="0,.25" tier="1,6" tags="primary"/>
+		<passive_effect name="BlockDamage" operation="perc_add" value="0,.25" tier="1,6" tags="primary"/>
+		<passive_effect name="StaminaLoss" operation="perc_add" value="0,-.1" tier="1,6" tags="primary"/>
+		<passive_effect name="AttacksPerMinute" operation="perc_add" value="0,.2" tier="1,6" tags="primary"/>
+	</append>
+	<append xpath="/items/item[@name='meleeToolPickaxeIron']/effect_group[@name='Power Attack']">
+		<passive_effect name="EntityDamage" operation="perc_add" value="1,1.25" tier="1,6" tags="secondary"/>
+		<passive_effect name="BlockDamage" operation="perc_add" value="1,1.25" tier="1,6" tags="secondary"/>
+		<passive_effect name="StaminaLoss" operation="perc_add" value="0,-.1" tier="1,6" tags="secondary"/>
+		<passive_effect name="AttacksPerMinute" operation="perc_add" value="0,.1" tier="1,6" tags="secondary"/>
+	</append>
+
+	<!-- Iron Fireaxe -->
+	<append xpath="/items/item[@name='meleeToolFireaxeIron']/effect_group[@name='Base Effects']">
+		<passive_effect name="EntityDamage" operation="perc_add" value="0,.25" tier="1,6" tags="primary"/>
+		<passive_effect name="BlockDamage" operation="perc_add" value="0,.25" tier="1,6" tags="primary"/>
+		<passive_effect name="StaminaLoss" operation="perc_add" value="0,-.1" tier="1,6" tags="primary"/>
+		<passive_effect name="AttacksPerMinute" operation="perc_add" value="0,.2" tier="1,6" tags="primary"/>
+	</append>
+	<append xpath="/items/item[@name='meleeToolFireaxeIron']/effect_group[@name='Power Attack']">
+		<passive_effect name="EntityDamage" operation="perc_add" value="1,1.25" tier="1,6" tags="secondary"/>
+		<passive_effect name="BlockDamage" operation="perc_add" value="1,1.25" tier="1,6" tags="secondary"/>
+		<passive_effect name="StaminaLoss" operation="perc_add" value="0,-.1" tier="1,6" tags="secondary"/>
+		<passive_effect name="AttacksPerMinute" operation="perc_add" value="0,.1" tier="1,6" tags="secondary"/>
+	</append>
+
+	<!-- Iron Shovel -->
+	<append xpath="/items/item[@name='meleeToolShovelIron']/effect_group[@name='Base Effects']">
+		<passive_effect name="EntityDamage" operation="perc_add" value="0,.25" tier="1,6" tags="primary"/>
+		<passive_effect name="BlockDamage" operation="perc_add" value="0,.25" tier="1,6" tags="primary"/>
+		<passive_effect name="StaminaLoss" operation="perc_add" value="0,-.1" tier="1,6" tags="primary"/>
+		<passive_effect name="AttacksPerMinute" operation="perc_add" value="0,.2" tier="1,6" tags="primary"/>
+	</append>
+	<append xpath="/items/item[@name='meleeToolShovelIron']/effect_group[@name='Power Attack']">
+		<passive_effect name="EntityDamage" operation="perc_add" value="1,1.25" tier="1,6" tags="secondary"/>
+		<passive_effect name="BlockDamage" operation="perc_add" value="1,1.25" tier="1,6" tags="secondary"/>
+		<passive_effect name="StaminaLoss" operation="perc_add" value="0,-.1" tier="1,6" tags="secondary"/>
+		<passive_effect name="AttacksPerMinute" operation="perc_add" value="0,.1" tier="1,6" tags="secondary"/>
+	</append>
+
+	<!-- Steel Pickaxe -->
+	<append xpath="/items/item[@name='meleeToolPickaxeSteel']/effect_group[@name='Base Effects']">
+		<passive_effect name="EntityDamage" operation="perc_add" value="0,.25" tier="1,6" tags="primary"/>
+		<passive_effect name="BlockDamage" operation="perc_add" value="0,.25" tier="1,6" tags="primary"/>
+		<passive_effect name="StaminaLoss" operation="perc_add" value="0,-.1" tier="1,6" tags="primary"/>
+		<passive_effect name="AttacksPerMinute" operation="perc_add" value="0,.2" tier="1,6" tags="primary"/>
+	</append>
+	<append xpath="/items/item[@name='meleeToolPickaxeSteel']/effect_group[@name='Power Attack']">
+		<passive_effect name="EntityDamage" operation="perc_add" value="1,1.25" tier="1,6" tags="secondary"/>
+		<passive_effect name="BlockDamage" operation="perc_add" value="1,1.25" tier="1,6" tags="secondary"/>
+		<passive_effect name="StaminaLoss" operation="perc_add" value="0,-.1" tier="1,6" tags="secondary"/>
+		<passive_effect name="AttacksPerMinute" operation="perc_add" value="0,.1" tier="1,6" tags="secondary"/>
+	</append>
+
+	<!-- Steel Fireaxe -->
+	<append xpath="/items/item[@name='meleeToolFireaxeSteel']/effect_group[@name='Base Effects']">
+		<passive_effect name="EntityDamage" operation="perc_add" value="0,.25" tier="1,6" tags="primary"/>
+		<passive_effect name="BlockDamage" operation="perc_add" value="0,.25" tier="1,6" tags="primary"/>
+		<passive_effect name="StaminaLoss" operation="perc_add" value="0,-.1" tier="1,6" tags="primary"/>
+		<passive_effect name="AttacksPerMinute" operation="perc_add" value="0,.2" tier="1,6" tags="primary"/>
+	</append>
+	<append xpath="/items/item[@name='meleeToolFireaxeSteel']/effect_group[@name='Power Attack']">
+		<passive_effect name="EntityDamage" operation="perc_add" value="1,1.25" tier="1,6" tags="secondary"/>
+		<passive_effect name="BlockDamage" operation="perc_add" value="1,1.25" tier="1,6" tags="secondary"/>
+		<passive_effect name="StaminaLoss" operation="perc_add" value="0,-.1" tier="1,6" tags="secondary"/>
+		<passive_effect name="AttacksPerMinute" operation="perc_add" value="0,.1" tier="1,6" tags="secondary"/>
+	</append>
+
+	<!-- Steel Shovel -->
+	<append xpath="/items/item[@name='meleeToolShovelSteel']/effect_group[@name='Base Effects']">
+		<passive_effect name="EntityDamage" operation="perc_add" value="0,.25" tier="1,6" tags="primary"/>
+		<passive_effect name="BlockDamage" operation="perc_add" value="0,.25" tier="1,6" tags="primary"/>
+		<passive_effect name="StaminaLoss" operation="perc_add" value="0,-.1" tier="1,6" tags="primary"/>
+		<passive_effect name="AttacksPerMinute" operation="perc_add" value="0,.2" tier="1,6" tags="primary"/>
+	</append>
+	<append xpath="/items/item[@name='meleeToolShovelSteel']/effect_group[@name='Power Attack']">
+		<passive_effect name="EntityDamage" operation="perc_add" value="1,1.25" tier="1,6" tags="secondary"/>
+		<passive_effect name="BlockDamage" operation="perc_add" value="1,1.25" tier="1,6" tags="secondary"/>
+		<passive_effect name="StaminaLoss" operation="perc_add" value="0,-.1" tier="1,6" tags="secondary"/>
+		<passive_effect name="AttacksPerMinute" operation="perc_add" value="0,.1" tier="1,6" tags="secondary"/>
+	</append>
+
+
+
+	<!-- Old toolings:
+
+	Melee Weapons
+	<remove xpath="/items/item[@name='meleeToolSledgehammer']/effect_group[@name='Power Attack']/passive_effect[@name='EntityDamage']" />
+	<remove xpath="/items/item[@name='meleeToolSledgehammer']/effect_group[@name='Power Attack']/passive_effect[@name='AttacksPerMinute']" />
+	<append xpath="/items/item[@name='meleeToolSledgehammer']/effect_group[@name='Power Attack']">
+		<passive_effect name="EntityDamage" operation="perc_add" value="1.7,2.2" tier="1,6" tags="secondary"/>
+		<passive_effect name="AttacksPerMinute" operation="perc_add" value="-.3,0" tier="1,6" tags="secondary"/>
+	</append>
+	<append xpath="/items/item[@name='meleeToolSledgehammer']/effect_group[@name='Base Effects']">
+		<passive_effect name="StaminaLoss" operation="perc_add" value="0,-.1" tier="1,6" tags="primary,secondary"/>
+	</append>
+
+	SteelPickaxe 
+	<remove xpath="/items/item[@name='meleeToolPickaxeSteel']/effect_group[@name='Power Attack']/passive_effect[@name='BlockDamage']" />
+	<remove xpath="/items/item[@name='meleeToolPickaxeSteel']/effect_group[@name='Power Attack']/passive_effect[@name='AttacksPerMinute']" />
+	<remove xpath="/items/item[@name='meleeToolPickaxeSteel']/effect_group[@name='Base Effects']/passive_effect[@name='BlockDamage']" />
+	<append xpath="/items/item[@name='meleeToolPickaxeSteel']/effect_group[@name='Power Attack']">
+		<passive_effect name="BlockDamage" operation="perc_add" value="2,2.5" tier="1,6" tags="secondary"/>
+		<passive_effect name="AttacksPerMinute" operation="perc_add" value="-.3,0" tier="1,6" tags="secondary"/>
+	</append>
+	<append xpath="/items/item[@name='meleeToolPickaxeSteel']/effect_group[@name='Base Effects']">
+		<passive_effect name="BlockDamage" operation="base_set" value="105"/>
+		<passive_effect name="StaminaLoss" operation="perc_add" value="0,-.1" tier="1,6" tags="primary,secondary"/>
+	</append>
+
+	SteelFireaxe 
+	<remove xpath="/items/item[@name='meleeToolFireaxeSteel']/effect_group[@name='Power Attack']/passive_effect[@name='BlockDamage']" />
+	<remove xpath="/items/item[@name='meleeToolFireaxeSteel']/effect_group[@name='Power Attack']/passive_effect[@name='AttacksPerMinute']" />
+	<append xpath="/items/item[@name='meleeToolFireaxeSteel']/effect_group[@name='Power Attack']">
+		<passive_effect name="BlockDamage" operation="perc_add" value="2,2.5" tier="1,6" tags="secondary"/>
+		<passive_effect name="AttacksPerMinute" operation="perc_add" value="-.3,0" tier="1,6" tags="secondary"/>
+	</append>
+	<append xpath="/items/item[@name='meleeToolFireaxeSteel']/effect_group[@name='Base Effects']">
+		<passive_effect name="StaminaLoss" operation="perc_add" value="0,-.1" tier="1,6" tags="primary,secondary"/>
+	</append>
+
+	SteelShovel 
+	<remove xpath="/items/item[@name='meleeToolShovelSteel']/effect_group[@name='Power Attack']/passive_effect[@name='BlockDamage']" />
+	<remove xpath="/items/item[@name='meleeToolShovelSteel']/effect_group[@name='Power Attack']/passive_effect[@name='AttacksPerMinute']" />
+	<remove xpath="/items/item[@name='meleeToolShovelSteel']/effect_group[@name='Base Effects']/passive_effect[@name='BlockDamage']" />
+	<append xpath="/items/item[@name='meleeToolShovelSteel']/effect_group[@name='Power Attack']">
+		<passive_effect name="BlockDamage" operation="perc_add" value="2,2.5" tier="1,6" tags="secondary"/>
+		<passive_effect name="AttacksPerMinute" operation="perc_add" value="-.3,0" tier="1,6" tags="secondary"/>
+	</append>
+	<append xpath="/items/item[@name='meleeToolShovelSteel']/effect_group[@name='Base Effects']">
+		<passive_effect name="StaminaLoss" operation="perc_add" value="0,-.1" tier="1,6" tags="primary,secondary"/>
+		<passive_effect name="BlockDamage" operation="base_set" value="100"/>
+	</append>
+
+	-->
+
+	<!-- Nailgun fix -->
+	<remove xpath="/items/item[@name='gunToolNailgun']/property[@class='Action1']/property[@name='Delay']" />
+	<append xpath="/items/item[@name='gunToolNailgun']/property[@class='Action1']">
+		<property name="Delay" value="0.25"/>
+	</append>
+
+</configs>

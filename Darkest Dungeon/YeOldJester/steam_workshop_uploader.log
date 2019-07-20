@@ -1,0 +1,27 @@
+
+-------------------------------------------------------------------------------
+Parsing project file - E:\DD_Archive\YeOldJester\project.xml
+Mod Data Directory = E:/DD_Archive/YeOldJester/
+
+Creating new item...
+.....Created
+
+-------------------------------------------------------------------------------
+Processing Map Files files...
+
+-------------------------------------------------------------------------------
+Searching for preview icon file E:/DD_Archive/YeOldJester/preview_icon.png...NOT FOUND! - Copying default preview icon to mod directory
+<UploadMode> - Set to direct_upload
+
+
+-------------------------------------------------------------------------------
+Modded files...
+
+heroes/jester/jester.info.darkest
+effects/base.effects.darkest
+preview_icon.png
+project.xml
+
+Submitting................................................................Submitted.
+Saving project file E:\DD_Archive\YeOldJester\project.xml
+

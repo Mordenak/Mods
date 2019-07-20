@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/StorytellerDef[defName = "Cassandra"]/comps/li[@Class="StorytellerCompProperties_OnOffCycle" and incident="OrbitalTraderArrival"]</xpath>
+		<value>
+			<li Class="StorytellerCompProperties_OnOffCycle">
+				<incident>OrbitalTraderArrival</incident>
+				<onDays>8</onDays>
+				<offDays>3</offDays>
+				<numIncidentsRange>2</numIncidentsRange>
+			</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/StorytellerDef[defName = "Phoebe"]/comps/li[@Class="StorytellerCompProperties_OnOffCycle" and incident="OrbitalTraderArrival"]</xpath>
+		<value>
+			<li Class="StorytellerCompProperties_OnOffCycle">
+				<incident>OrbitalTraderArrival</incident>
+				<onDays>8</onDays>
+				<offDays>3</offDays>
+				<numIncidentsRange>2</numIncidentsRange>
+			</li>
+		</value>
+	</Operation>
+
+</Patch>

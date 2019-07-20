@@ -1,0 +1,23 @@
+<configs>
+
+	<!-- Actually make the silencer on all weapons more like on the pistol -->
+
+	<!-- Sniper -->
+	<remove xpath="/Sounds/SoundDataNode[@name='sniperrifle_s_fire']/Noise" />
+	<append xpath="/Sounds/SoundDataNode[@name='sniperrifle_s_fire']">
+		<Noise ID="5" range="18" volume="45" time="2" heat_map_strength="0.3" heat_map_time="10"/>
+	</append>
+
+	<!-- Hunting Rifle -->
+	<remove xpath="/Sounds/SoundDataNode[@name='hunting_rifle_s_fire']/Noise" />
+	<append xpath="/Sounds/SoundDataNode[@name='hunting_rifle_s_fire']">
+		<Noise ID="5" range="60" volume="45" time="2" heat_map_strength="0.01" heat_map_time="10"/>
+	</append>
+
+	<!-- AK47 -->
+	<remove xpath="/Sounds/SoundDataNode[@name='ak47_s_fire']/Noise" />
+	<append xpath="/Sounds/SoundDataNode[@name='ak47_s_fire']">
+		<Noise ID="5" range="18" volume="35" time="2" heat_map_strength="0.01" heat_map_time="10"/>
+	</append>
+
+</configs>

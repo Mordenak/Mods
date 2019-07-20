@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+	<PreviewIconFile>preview_icon.png</PreviewIconFile>
+	<ItemDescriptionShort/>
+	<ModDataPath>E:/DD_Archive/FreeTheAbom/</ModDataPath>
+	<Title>Free The Abom</Title>
+	<Language>english</Language>
+	<UpdateDetails/>
+	<Visibility>private</Visibility>
+	<UploadMode>direct_upload</UploadMode>
+	<VersionMajor>0</VersionMajor>
+	<VersionMinor>1</VersionMinor>
+	<TargetBuild>20229</TargetBuild>
+	<Tags>
+		<Tags>Class Tweaks</Tags>
+	</Tags>
+	<ItemDescription>Simple mod removes the religious restriction from the Abomination, allowing them to be partied with all other heroes.  No other changes.</ItemDescription>
+	<PublishedFileId>959839211</PublishedFileId>
+</project>
+
