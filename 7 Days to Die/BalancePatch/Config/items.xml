@@ -225,64 +225,158 @@
 		<passive_effect name="AttacksPerMinute" operation="perc_add" value="0,.1" tier="1,6" tags="secondary"/>
 	</append>
 
-
-
-	<!-- Old toolings:
-
-	Melee Weapons
-	<remove xpath="/items/item[@name='meleeToolSledgehammer']/effect_group[@name='Power Attack']/passive_effect[@name='EntityDamage']" />
-	<remove xpath="/items/item[@name='meleeToolSledgehammer']/effect_group[@name='Power Attack']/passive_effect[@name='AttacksPerMinute']" />
-	<append xpath="/items/item[@name='meleeToolSledgehammer']/effect_group[@name='Power Attack']">
-		<passive_effect name="EntityDamage" operation="perc_add" value="1.7,2.2" tier="1,6" tags="secondary"/>
-		<passive_effect name="AttacksPerMinute" operation="perc_add" value="-.3,0" tier="1,6" tags="secondary"/>
-	</append>
-	<append xpath="/items/item[@name='meleeToolSledgehammer']/effect_group[@name='Base Effects']">
-		<passive_effect name="StaminaLoss" operation="perc_add" value="0,-.1" tier="1,6" tags="primary,secondary"/>
-	</append>
-
-	SteelPickaxe 
-	<remove xpath="/items/item[@name='meleeToolPickaxeSteel']/effect_group[@name='Power Attack']/passive_effect[@name='BlockDamage']" />
-	<remove xpath="/items/item[@name='meleeToolPickaxeSteel']/effect_group[@name='Power Attack']/passive_effect[@name='AttacksPerMinute']" />
-	<remove xpath="/items/item[@name='meleeToolPickaxeSteel']/effect_group[@name='Base Effects']/passive_effect[@name='BlockDamage']" />
-	<append xpath="/items/item[@name='meleeToolPickaxeSteel']/effect_group[@name='Power Attack']">
-		<passive_effect name="BlockDamage" operation="perc_add" value="2,2.5" tier="1,6" tags="secondary"/>
-		<passive_effect name="AttacksPerMinute" operation="perc_add" value="-.3,0" tier="1,6" tags="secondary"/>
-	</append>
-	<append xpath="/items/item[@name='meleeToolPickaxeSteel']/effect_group[@name='Base Effects']">
-		<passive_effect name="BlockDamage" operation="base_set" value="105"/>
-		<passive_effect name="StaminaLoss" operation="perc_add" value="0,-.1" tier="1,6" tags="primary,secondary"/>
-	</append>
-
-	SteelFireaxe 
-	<remove xpath="/items/item[@name='meleeToolFireaxeSteel']/effect_group[@name='Power Attack']/passive_effect[@name='BlockDamage']" />
-	<remove xpath="/items/item[@name='meleeToolFireaxeSteel']/effect_group[@name='Power Attack']/passive_effect[@name='AttacksPerMinute']" />
-	<append xpath="/items/item[@name='meleeToolFireaxeSteel']/effect_group[@name='Power Attack']">
-		<passive_effect name="BlockDamage" operation="perc_add" value="2,2.5" tier="1,6" tags="secondary"/>
-		<passive_effect name="AttacksPerMinute" operation="perc_add" value="-.3,0" tier="1,6" tags="secondary"/>
-	</append>
-	<append xpath="/items/item[@name='meleeToolFireaxeSteel']/effect_group[@name='Base Effects']">
-		<passive_effect name="StaminaLoss" operation="perc_add" value="0,-.1" tier="1,6" tags="primary,secondary"/>
-	</append>
-
-	SteelShovel 
-	<remove xpath="/items/item[@name='meleeToolShovelSteel']/effect_group[@name='Power Attack']/passive_effect[@name='BlockDamage']" />
-	<remove xpath="/items/item[@name='meleeToolShovelSteel']/effect_group[@name='Power Attack']/passive_effect[@name='AttacksPerMinute']" />
-	<remove xpath="/items/item[@name='meleeToolShovelSteel']/effect_group[@name='Base Effects']/passive_effect[@name='BlockDamage']" />
-	<append xpath="/items/item[@name='meleeToolShovelSteel']/effect_group[@name='Power Attack']">
-		<passive_effect name="BlockDamage" operation="perc_add" value="2,2.5" tier="1,6" tags="secondary"/>
-		<passive_effect name="AttacksPerMinute" operation="perc_add" value="-.3,0" tier="1,6" tags="secondary"/>
-	</append>
-	<append xpath="/items/item[@name='meleeToolShovelSteel']/effect_group[@name='Base Effects']">
-		<passive_effect name="StaminaLoss" operation="perc_add" value="0,-.1" tier="1,6" tags="primary,secondary"/>
-		<passive_effect name="BlockDamage" operation="base_set" value="100"/>
-	</append>
-
-	-->
-
 	<!-- Nailgun fix -->
 	<remove xpath="/items/item[@name='gunToolNailgun']/property[@class='Action1']/property[@name='Delay']" />
 	<append xpath="/items/item[@name='gunToolNailgun']/property[@class='Action1']">
 		<property name="Delay" value="0.25"/>
+	</append>
+
+	<!-- Hoe fix -->
+	<remove xpath="/items/item[@name='meleeToolHoeIron']/property[@class='Action1']/property[@name='Delay']" />
+	<append xpath="/items/item[@name='meleeToolHoeIron']/property[@class='Action1']">
+		<property name="Delay" value="0.5"/>
+	</append>
+
+
+	
+	<append xpath="/items">
+
+		<!-- New Resource: -->
+		<item name="Forged Titanium">
+			<property name="CustomIcon" value="resourceForgedSteel"/>
+			<property name="CustomIconTint" value="150,150,150"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="Items/Misc/sackPrefab"/>
+			<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+			<property name="Material" value="MresourceForgedSteel"/>
+			<property name="Stacknumber" value="500"/> <!-- STK resource -->
+			<property name="EconomicValue" value="10000"/>
+			<property name="Group" value="Resources"/>
+			<property name="CraftingSkillGroup" value="craftSkillScience"/>
+			<property name="CraftingIngredientExp" value="1500"/>
+			<property name="CraftingIngredientTime" value="60"/>
+		</item>
+
+		<item name="Kevlar Mesh">
+			<property name="CustomIcon" value="resourceMilitaryFiber"/>
+			<property name="CustomIconTint" value="150,150,150"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="Items/Misc/sackPrefab"/>
+			<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+			<property name="Material" value="MmilitaryFiber"/>
+			<property name="Stacknumber" value="500"/> <!-- STK resource -->
+			<property name="EconomicValue" value="10000"/>
+			<property name="Group" value="Resources"/>
+			<property name="Weight" value="1"/>
+			<property name="CraftingSkillGroup" value="craftSkillScience"/>
+			<property name="CraftingIngredientExp" value="1500"/>
+			<property name="CraftingIngredientTime" value="60"/>
+		</item>
+
+		<item name="High Quality Metal Fragments">
+			<property name="CustomIcon" value="resourceSilverNugget"/>
+			<property name="CustomIconTint" value="130,130,130"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="Items/Misc/sackPrefab"/>
+			<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+			<property name="Material" value="Mmetal_weak"/>
+			<property name="Stacknumber" value="500"/> <!-- STK resource -->
+			<property name="EconomicValue" value="20"/>
+			<property name="Group" value="Resources"/>
+		</item>
+
+		<item name="Cobalt Fragment">
+			<property name="CustomIcon" value="resourceRawDiamond"/>
+			<property name="CustomIconTint" value="160,200,255"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="Items/Misc/sackPrefab"/>
+			<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+			<property name="Material" value="Mmetal_weak"/>
+			<property name="Stacknumber" value="20"/> <!-- STK resource -->
+			<property name="EconomicValue" value="200"/>
+			<property name="Group" value="Resources"/>
+		</item>
+
+		<item name="Cobalt Ingot">
+			<property name="CustomIcon" value="resourceForgedIron"/>
+			<property name="CustomIconTint" value="160,200,255"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="Items/Misc/sackPrefab"/>
+			<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+			<property name="Material" value="Mmetal_weak"/>
+			<property name="Stacknumber" value="20"/> <!-- STK resource -->
+			<property name="EconomicValue" value="2000"/>
+			<property name="Group" value="Resources"/>
+		</item>
+
+		<!-- Better Sledge: -->
+		<item name="Steel Sledgehammer">
+			<property name="Extends" value="meleeToolSledgehammer"/>
+			<property name="CustomIcon" value="meleeToolSledgehammer"/> 
+			<property name="CustomIconTint" value="a0a0ff"/>
+			<property name="Meshfile" value="Items/Tools/sledgehammer_steelPrefab"/>
+			<property name="RepairTools" value="resourceForgedSteel"/>
+			<property name="EconomicValue" value="912"/>
+			<property name="CraftingSkillGroup" value="craftSkillScience"/>
+			<property class="Action0">
+				<property name="Class" value="DynamicMelee"/>
+				<property name="Sphere" value="0.15"/>   <!-- limit to 0.15, else the sphere cast can overlap the target already -->
+				<property name="Sound_start" value="SlowSwoosh"/>
+				<property name="ToolCategory.harvestingTools" value=".5" param1="1"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="DynamicMelee"/>
+				<property name="Sphere" value="0.15"/>   <!-- limit to 0.15, else the sphere cast can overlap the target already -->
+				<property name="Sound_start" value="SlowSwoosh"/>
+				<property name="ToolCategory.harvestingTools" value=".5" param1="1"/>
+				<property name="UsePowerAttackAnimation" value="true"/>
+			</property>
+			<effect_group name="Base Effects">
+				<passive_effect name="MaxRange" operation="base_set" value="3.2"/>
+				<passive_effect name="BlockRange" operation="base_set" value="3.5"/>
+				<passive_effect name="EntityDamage" operation="base_set" value="63"/> <!-- meleeToolSledgehammer -->
+				<passive_effect name="BlockDamage" operation="base_set" value="120"/>
+				<passive_effect name="AttacksPerMinute" operation="base_set" value="39"/> <!-- A16 1.8 -->
+				<passive_effect name="StaminaLoss" operation="base_set" value="32" tags="primary"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="200,800" tier="1,6"/>
+				<passive_effect name="ModSlots" operation="base_set" value="0,5" tier="1,6"/>
+				<passive_effect name="ModPowerBonus" operation="perc_add" value=".15" tags="EntityDamage,BlockDamage"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="200" tags="EconomicValue"/>
+
+				<passive_effect name="HarvestCount" operation="base_add" value="-.75" tags="allHarvest"/>
+				<passive_effect name="HarvestCount" operation="base_add" value="-.75" tags="allToolsHarvest"/>
+				<passive_effect name="HarvestCount" operation="base_add" value="-.75" tags="oreWoodHarvest"/>
+			</effect_group>
+			<effect_group name="Power Attack">
+				<passive_effect name="EntityDamage" operation="perc_add" value="1" tags="secondary"/>
+				<passive_effect name="BlockDamage" operation="perc_add" value="1" tags="secondary"/>
+				<passive_effect name="AttacksPerMinute" operation="perc_subtract" value="0" tags="secondary"/>
+				<passive_effect name="StaminaLoss" operation="base_add" value="55" tags="secondary"/>
+				<triggered_effect trigger="onSelfSecondaryActionStart" action="PlaySound" target="self" sound="player1painlg">
+					<requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="80"/>
+					<requirement name="IsMale" target="self"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfSecondaryActionStart" action="PlaySound" target="self" sound="player2painlg">
+					<requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="80"/>
+					<requirement name="IsMale" target="self" invert="true"/>
+				</triggered_effect>
+			</effect_group>
+		</item>
+
+	</append>
+
+	<!-- Scale the Steel Seldge -->
+	<append xpath="/items/item[@name='Steel Sledgehammer']/effect_group[@name='Base Effects']">
+		<passive_effect name="EntityDamage" operation="perc_add" value="0,.25" tier="1,6" tags="primary"/>
+		<passive_effect name="BlockDamage" operation="perc_add" value="0,.25" tier="1,6" tags="primary"/>
+		<passive_effect name="StaminaLoss" operation="perc_add" value="0,-.1" tier="1,6" tags="primary"/>
+		<passive_effect name="AttacksPerMinute" operation="perc_add" value="0,.2" tier="1,6" tags="primary"/>
+	</append>
+	<append xpath="/items/item[@name='Steel Sledgehammer']/effect_group[@name='Power Attack']">
+		<passive_effect name="EntityDamage" operation="perc_add" value="1,1.5" tier="1,6" tags="secondary"/>
+		<passive_effect name="BlockDamage" operation="perc_add" value="1,1.5" tier="1,6" tags="secondary"/>
+		<passive_effect name="StaminaLoss" operation="perc_add" value="0,-.1" tier="1,6" tags="secondary"/>
+		<passive_effect name="AttacksPerMinute" operation="perc_add" value="0,.1" tier="1,6" tags="secondary"/>
 	</append>
 
 </configs>

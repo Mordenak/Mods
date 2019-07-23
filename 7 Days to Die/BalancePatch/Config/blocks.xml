@@ -1,0 +1,13 @@
+<configs>
+
+	<append xpath="/blocks/block[@name='rockResource']">
+		<drop event="Harvest" name="High Quality Metal Fragments" count="1,6" prob="0.18" tag="oreWoodHarvest"/>
+		<drop event="Harvest" name="Cobalt Fragment" count="1" prob="0.03" tag="oreWoodHarvest"/>
+	</append>
+
+	<append xpath="/blocks/block[@name='terrOreIron']">
+		<drop event="Harvest" name="High Quality Metal Fragments" count="1,8" prob="0.13" tag="oreWoodHarvest"/>
+		<drop event="Harvest" name="Cobalt Fragment" count="1" prob="0.02" tag="oreWoodHarvest"/>
+	</append>
+
+</configs>

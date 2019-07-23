@@ -1,0 +1,94 @@
+<configs>
+
+	<append xpath="/recipes">
+
+		<recipe name="Cobalt Ingot" count="1" craft_area="workbench">
+			<ingredient name="High Quality Metal Fragments" count="100"/>
+		</recipe>
+
+		<recipe name="Cobalt Ingot" count="1" craft_area="workbench">
+			<ingredient name="Cobalt Fragment" count="4"/>
+		</recipe>
+
+		<recipe name="Forged Titanium" count="1" craft_area="workbench">
+			<ingredient name="resourceForgedSteel" count="100"/>
+			<ingredient name="Cobalt Ingot" count="2"/>
+		</recipe>
+
+		<recipe name="Kevlar Mesh" count="1" craft_area="workbench">
+			<ingredient name="resourceMilitaryFiber" count="50"/>
+		</recipe>
+
+		<recipe name="Bunker Buster Mk 2" count="1" craft_area="workbench">
+			<ingredient name="modMeleeBunkerBuster" count="1"/>
+			<ingredient name="Forged Titanium" count="1"/>
+		</recipe>
+
+		<recipe name="Iron Breaker Mk 2" count="1" craft_area="workbench">
+			<ingredient name="modMeleeIronBreaker" count="1"/>
+			<ingredient name="Forged Titanium" count="1"/>
+		</recipe>
+
+		<recipe name="Wood Splitter Mk 2" count="1" craft_area="workbench">
+			<ingredient name="modMeleeWoodSplitter" count="1"/>
+			<ingredient name="Forged Titanium" count="1"/>
+		</recipe>
+
+		<recipe name="Grave Digger Mk 2" count="1" craft_area="workbench">
+			<ingredient name="modMeleeGraveDigger" count="1"/>
+			<ingredient name="Forged Titanium" count="1"/>
+		</recipe>
+
+		<recipe name="Foregrip Mk 2" count="1" craft_area="workbench">
+			<ingredient name="modGunForegrip" count="1"/>
+			<ingredient name="Forged Titanium" count="1"/>
+		</recipe>
+
+		<recipe name="Retracting Stock Mk 2" count="1" craft_area="workbench">
+			<ingredient name="modGunRetractingStock" count="1"/>
+			<ingredient name="Forged Titanium" count="1"/>
+		</recipe>
+
+		<recipe name="Bipod Mk 2" count="1" craft_area="workbench">
+			<ingredient name="modGunBipod" count="1"/>
+			<ingredient name="Forged Titanium" count="1"/>
+		</recipe>
+
+		<recipe name="Rod And Spring Mk 2" count="1" craft_area="workbench">
+			<ingredient name="modGunRodAndSpring" count="1"/>
+			<ingredient name="Forged Titanium" count="1"/>
+		</recipe>
+
+		<recipe name="Customized Fittings Mk 2" count="1" craft_area="workbench">
+			<ingredient name="modArmorCustomizedFittings" count="1"/>
+			<ingredient name="Kevlar Mesh" count="1"/>
+		</recipe>
+
+		<recipe name="Kevlar Plating" count="1" craft_area="workbench">
+			<ingredient name="modArmorMilitaryPlating" count="1"/>
+			<ingredient name="Kevlar Mesh" count="1"/>
+		</recipe>
+
+		<recipe name="Titanium Plating" count="1" craft_area="workbench">
+			<ingredient name="modArmorSteelPlating" count="1"/>
+			<ingredient name="Forged Titanium" count="1"/>
+		</recipe>
+
+		<recipe name="Ergonomic Grip Mk 2" count="1" craft_area="workbench">
+			<ingredient name="modMeleeErgonomicGrip" count="1"/>
+			<ingredient name="Forged Titanium" count="1"/>
+		</recipe>
+
+		<recipe name="Structural Brace Mk 2" count="1" craft_area="workbench">
+			<ingredient name="modMeleeStructuralBrace" count="1"/>
+			<ingredient name="Forged Titanium" count="1"/>
+		</recipe>
+
+		<recipe name="Steel Sledgehammer" count="1" craft_area="workbench">
+			<ingredient name="resourceForgedSteel" count="30"/>
+			<ingredient name="resourceWood" count="10"/>
+		</recipe>
+
+	</append>
+
+</configs>

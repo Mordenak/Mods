@@ -16,12 +16,12 @@
 -->
 
 	<append xpath="/lootcontainers/lootgroup[@name='modGunT2']">
-		<item name="modGunSteelHammer"/>
-		<item name="modGunBowHighTensionString"/>
+		<item name="Steel Hammer"/>
+		<item name="High Tension String"/>
 	</append>
 
 	<append xpath="/lootcontainers/lootgroup[@name='modGunT3']">
-		<item name="modGunTitaniumHammer"/>
+		<item name="Titanium Hammer"/>
 	</append>
 
 </configs>

@@ -1,7 +1,7 @@
 <configs>	
 	<append xpath="/item_modifiers">
 
-		<item_modifier name="modGunSteelHammer" installable_tags="gun" type="attachment">
+		<item_modifier name="Steel Hammer" installable_tags="gun" type="attachment">
 			<property name="Stacknumber" value="1"/>
 			<property name="CustomIcon" value="modGunTriggerGroupBurst"/>
 			<property name="CustomIconTint" value="190,190,190"/>
@@ -10,7 +10,7 @@
 			</effect_group>
 		</item_modifier>
 
-		<item_modifier name="modGunTitaniumHammer" installable_tags="gun" type="attachment">
+		<item_modifier name="Titanium Hammer" installable_tags="gun" type="attachment">
 			<property name="Stacknumber" value="1"/>
 			<property name="CustomIcon" value="modGunTriggerGroupBurst"/>
 			<property name="CustomIconTint" value="130,130,130"/>
@@ -19,13 +19,178 @@
 			</effect_group>
 		</item_modifier>
 
-		<item_modifier name="modGunBowHighTensionString" installable_tags="bow" type="attachment">
+		<item_modifier name="High Tension String" installable_tags="bow" type="attachment">
 			<property name="Stacknumber" value="1"/>
 			<property name="CustomIcon" value="modGunBowPolymerString"/>
 			<property name="CustomIconTint" value="150,150,150"/>
 			<effect_group tiered="false">
 				<passive_effect name="EntityDamage" operation="perc_add" value=".5"/>
 			</effect_group>
+		</item_modifier>
+
+		<item_modifier name="Going The Distance" installable_tags="armorFeet" modifier_tags="legendary" type="attachment" rarity="1">
+			<property name="Stacknumber" value="1"/>
+			<property name="CustomIcon" value="armorMilitaryBoots"/>
+			<property name="CustomIconTint" value="255,210,210"/>
+			<!-- Reload Guns X% faster;  would like to add it to "legs" but buffs dont stack like that -->
+			<effect_group tiered="false">
+				<passive_effect name="Mobility" operation="perc_add" value="0.03"/>
+				<passive_effect name="StaminaChangeOT" operation="perc_add" value="0.3" tags="walking"/>
+				<passive_effect name="StaminaChangeOT" operation="perc_add" value="0.3" tags="running"/>
+				<display_value name="dStaminaChangeOT" value="0.3"/>
+			</effect_group>
+		</item_modifier>
+
+		<!-- Upgraded mods: -->
+		<item_modifier name="Bunker Buster Mk 2" installable_tags="melee" modifier_tags="damageStone" type="attachment" rarity="1">
+			<property name="Stacknumber" value="1"/>
+			<property name="CustomIcon" value="modMeleeBunkerBuster"/>
+			<property name="CustomIconTint" value="255,210,210"/>
+			<effect_group tiered="false">
+				<passive_effect name="DamageModifier" operation="perc_add" value=".3" tags="stone"/>
+			</effect_group>
+			<property name="PickupJournalEntry" value="augmentGunsTip"/>
+		</item_modifier>
+
+		<item_modifier name="Iron Breaker Mk 2" installable_tags="melee" modifier_tags="damageIron" type="attachment" rarity="1">
+			<property name="Stacknumber" value="1"/>
+			<property name="CustomIcon" value="modMeleeIronBreaker"/>
+			<property name="CustomIconTint" value="255,210,210"/>
+			<effect_group tiered="false">
+				<passive_effect name="DamageModifier" operation="perc_add" value=".3" tags="metal"/>
+			</effect_group>
+			<property name="PickupJournalEntry" value="augmentGunsTip"/>
+		</item_modifier>
+
+		<item_modifier name="Wood Splitter Mk 2" installable_tags="melee" modifier_tags="damageWood" type="attachment" rarity="1">
+			<property name="Stacknumber" value="1"/>
+			<property name="CustomIcon" value="modMeleeWoodSplitter"/>
+			<property name="CustomIconTint" value="255,210,210"/>
+			<effect_group tiered="false">
+				<passive_effect name="DamageModifier" operation="perc_add" value=".3" tags="wood"/>
+			</effect_group>
+			<property name="PickupJournalEntry" value="augmentGunsTip"/>
+		</item_modifier>
+
+		<item_modifier name="Grave Digger Mk 2" installable_tags="melee" modifier_tags="damageDirt" type="attachment" rarity="1">
+			<property name="Stacknumber" value="1"/>
+			<property name="CustomIcon" value="modMeleeGraveDigger"/>
+			<property name="CustomIconTint" value="255,210,210"/>
+			<effect_group tiered="false">
+				<passive_efect name="DamageModifier" operation="perc_add" value=".3" tags="earth"/>
+			</effect_group>
+			<property name="PickupJournalEntry" value="augmentGunsTip"/>
+		</item_modifier>
+
+		<item_modifier name="Foregrip Mk 2" installable_tags="bottomAttachments" modifier_tags="grips" type="attachment" rarity="1">
+			<property name="Stacknumber" value="1"/>
+			<property name="CustomIcon" value="modGunForegrip"/>
+			<property name="CustomIconTint" value="255,210,210"/>
+			<effect_group tiered="false">
+				<passive_effect name="SpreadMultiplierAiming" operation="perc_add" value="-.16"/>
+				<passive_effect name="SpreadMultiplierCrouching" operation="perc_add" value="-.4"/>
+				<passive_effect name="SpreadMultiplierHip" operation="perc_add" value="-.3"/>
+				<passive_effect name="SpreadMultiplierWalking" operation="perc_add" value="-.4"/>
+				<passive_effect name="WeaponHandling" operation="perc_add" value=".3"/>
+				<passive_effect name="KickDegreesVertical" operation="perc_subtract" value="0.5"/>
+				<passive_effect name="KickDegreesHorizontal" operation="perc_subtract" value="0.5"/>
+			</effect_group>
+			<property name="PickupJournalEntry" value="augmentGunsTip"/>
+		</item_modifier>
+
+		<item_modifier name="Retracting Stock Mk 2" installable_tags="stock" modifier_tags="stocks" type="attachment" rarity="1">
+			<property name="Stacknumber" value="1"/>
+			<property name="CustomIcon" value="modGunRetractingStock"/>
+			<property name="CustomIconTint" value="255,210,210"/>
+			<effect_group tiered="false">
+				<passive_effect name="SpreadMultiplierHip" operation="perc_add" value="-0.3"/>
+			</effect_group>
+			<property name="PickupJournalEntry" value="augmentGunsTip"/>
+		</item_modifier>
+
+		<item_modifier name="Bipod Mk 2" installable_tags="bottomAttachments" blocked_tags="shortRange" modifier_tags="accuracy" type="attachment"  rarity="1">
+			<property name="Stacknumber" value="1"/>
+			<property name="CustomIcon" value="modGunBipod"/>
+			<property name="CustomIconTint" value="255,210,210"/>
+			<effect_group tiered="false">
+				<passive_effect name="SpreadMultiplierAiming" operation="perc_add" value="-.5"/>
+				<passive_effect name="WeaponHandling" operation="perc_add" value="-.3"/>
+			</effect_group>
+			<property name="PickupJournalEntry" value="augmentGunsTip"/>
+		</item_modifier>
+
+		<item_modifier name="Rod And Spring Mk 2" installable_tags="selfLoading" modifier_tags="fireRate" type="attachment" rarity="1">
+			<property name="Stacknumber" value="1"/>
+			<property name="CustomIcon" value="modGunRodAndSpring"/>
+			<property name="CustomIconTint" value="255,210,210"/>
+			<effect_group tiered="false">
+				<passive_effect name="RoundsPerMinute" operation="perc_add" value=".6"/>
+				<!--<passive_effect name="DegradationPerUse" operation="perc_subtract" value=".2"/>-->
+			</effect_group>
+			<property name="PickupJournalEntry" value="augmentGunsTip"/>
+		</item_modifier>
+
+		<item_modifier name="Customized Fittings Mk 2" installable_tags="armor" blocked_tags="padded" modifier_tags="movement" type="attachment" rarity="1">
+			<property name="DisplayType" value="modArmorMobility"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="CustomIcon" value="modArmorCustomizedFittings"/>
+			<property name="CustomIconTint" value="255,210,210"/>
+			<effect_group tiered="false">
+				<passive_effect name="Mobility" operation="perc_add" value="0.06"/>
+				<passive_effect name="StaminaChangeOT" operation="perc_add" value="0.042" tags="walking"/>
+				<passive_effect name="StaminaChangeOT" operation="perc_add" value="0.1" tags="running"/>
+				<display_value name="dStaminaChangeOT" value="0.1"/>
+			</effect_group>
+		</item_modifier>
+
+		<item_modifier name="Kevlar Plating" installable_tags="lightarmor" blocked_tags="padded" modifier_tags="resistance" type="attachment" rarity="1">
+			<property name="DisplayType" value="modArmorLight"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="CustomIcon" value="modArmorMilitaryPlating"/>
+			<property name="CustomIconTint" value="255,210,210"/>
+			<effect_group tiered="false">
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="6"/>
+			</effect_group>
+		</item_modifier>
+
+		<item_modifier name="Titanium Plating" installable_tags="heavyarmor" modifier_tags="resistance" type="attachment" rarity="1">
+			<property name="DisplayType" value="modArmorHeavy"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="CustomIcon" value="modArmorSteelPlating"/>
+			<property name="CustomIconTint" value="255,210,210"/>
+			<effect_group tiered="false">
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="6"/>
+			</effect_group>
+		</item_modifier>
+
+		<item_modifier name="Ergonomic Grip Mk 2" installable_tags="melee,bow" modifier_tags="health" type="attachment" rarity="1">
+			<property name="Stacknumber" value="1"/>
+			<property name="CustomIcon" value="modMeleeErgonomicGrip"/>
+			<property name="CustomIconTint" value="255,210,210"/>
+			<!-- Reduces Stamina usage on all attacks, all melee -->
+			<effect_group tiered="false">
+				<requirement name="HoldingItemHasTags" tags="perkArchery" invert="true"/>
+				<passive_effect name="StaminaLoss" operation="perc_add" value="-.2" tags="primary,secondary"/>
+			</effect_group>
+			<effect_group tiered="false">
+				<requirement name="HoldingItemHasTags" tags="perkArchery"/>
+				<passive_effect name="WeaponHandling" operation="perc_add" value=".2"/>
+			</effect_group>
+			<property name="PickupJournalEntry" value="augmentGunsTip"/>
+		</item_modifier>
+
+		<item_modifier name="Structural Brace Mk 2" installable_tags="melee,perkArchery" modifier_tags="durability" type="attachment" rarity="1">
+			<property name="Stacknumber" value="1"/>
+			<property name="CustomIcon" value="modMeleeStructuralBrace"/>
+			<property name="CustomIconTint" value="255,210,210"/>
+			<!-- Increases durability, increases block efficiency, all melee -->
+			<effect_group tiered="false">
+				<passive_effect name="DamageModifier" operation="perc_add" value=".2"/>
+				<!-- <passive_effect name="EntityDamage" operation="perc_add" value=".2"/> -->
+				<!-- <passive_effect name="BlockDamage" operation="perc_add" value=".5"/> -->
+				<passive_effect name="DegradationMax" operation="perc_add" value=".5"/>
+			</effect_group>
+			<property name="PickupJournalEntry" value="augmentGunsTip"/>
 		</item_modifier>
 
 	</append>
