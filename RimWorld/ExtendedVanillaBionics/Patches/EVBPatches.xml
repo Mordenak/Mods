@@ -24,4 +24,23 @@
 		</value>
 	</Operation>
 
+	<!-- Nerf Vanilla Bionics Cost -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>
+			/Defs/ThingDef[defName="BionicEye" or defName="BionicArm" or defName="BionicLeg" or defName="BionicSpine" or defName="BionicHeart"]/costList/ComponentSpacer
+		</xpath>
+		<value>
+			<ComponentIndustrial>8</ComponentIndustrial>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>
+			/Defs/ThingDef[defName="BionicStomach" or defName="BionicEar"]/costList/ComponentSpacer
+		</xpath>
+		<value>
+			<ComponentIndustrial>6</ComponentIndustrial>
+		</value>
+	</Operation>
+
 </Patch>

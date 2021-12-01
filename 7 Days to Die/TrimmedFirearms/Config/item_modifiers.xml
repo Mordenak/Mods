@@ -1,0 +1,48 @@
+<configs>
+	<!--
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+									Silencer Sounds
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->
+	<append xpath="/item_modifiers/item_modifier[@name='modGunSoundSuppressorSilencer']">
+		<!-- Shotgun -->
+		<item_property_overrides name="Spaz12">
+			<property name="Sound_start" value="silence1"/>
+		</item_property_overrides>
+		<!-- Rifle -->
+		<item_property_overrides name="M4A1">
+			<property name="Sound_start" value="silence4"/>
+		</item_property_overrides>
+	</append>
+	<!--
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+						Reflex Sight adjustments
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->
+	<append xpath="/item_modifiers/item_modifier[@name='modGunReflexSight']">
+		<item_property_overrides name="Spaz12">
+			<property name="CrosshairOnAim" value="false"/>
+			<property name="ScopeCameraOffset" value="0.0001,-0.013,0.35"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="M4A1">
+			<property name="Meshfile" value="#@modfolder:Resources/Rifles.unity3d?M4A1ScopePrefab"/>
+			<property name="CrosshairOnAim" value="false"/>
+			<property name="ScopeCameraOffset" value="-0.0009,0.0012,0.22"/>
+		</item_property_overrides>
+	</append>
+	<!--
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+						Laser Sight Adjustments
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->
+	<append xpath="/item_modifiers/item_modifier[@name='modGunLaserSight']">
+		<item_property_overrides name="Spaz12">
+			<property name="CrosshairOnAim" value="false"/>
+		</item_property_overrides>
+
+		<item_property_overrides name="M4A1">
+			<property name="CrosshairOnAim" value="false"/>
+		</item_property_overrides>
+	</append>
+</configs>			

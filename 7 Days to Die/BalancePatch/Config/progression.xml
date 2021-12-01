@@ -1,59 +1,76 @@
 <configs>
 
-	<!-- Change PackMule to have all tiers purchaseable from Level 1 -->
-
-	<set xpath="/progression/perks/perk[@name='perkPackMule']/level_requirements/requirement/@desc_key">reqStrengthLevel1</set>
-	<set xpath="/progression/perks/perk[@name='perkPackMule']/level_requirements/requirement/@value">1</set>
-
-	<!-- Change Steel to Level 60? -->
-	<remove xpath="/progression/perks/perk[@name='perkHammerForge']/level_requirements[@level='4']/requirement[@name='PlayerLevel']" />
-	<append xpath="/progression/perks/perk[@name='perkHammerForge']/level_requirements[@level='4']">
-		<requirement name="PlayerLevel" operation="GTE" value="60" desc_key="reqAttributeLevelDummy"/>
-	</append>
-
-	<!-- And Update Tooltip?? -->
-	<remove xpath="/progression/perks/perk[@name='perkHammerForge']/level_requirements[@level='4']/requirement[@name='ProgressionLevel']" />
-	<append xpath="/progression/perks/perk[@name='perkHammerForge']/level_requirements[@level='4']">
-		<requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="8" desc_key="reqIntellectLevel08-60"/>
-	</append>
-
-	<!-- Change Armor to Level 80? -->
-	<remove xpath="/progression/perks/perk[@name='perkHammerForge']/level_requirements[@level='5']/requirement[@name='PlayerLevel']" />
-	<append xpath="/progression/perks/perk[@name='perkHammerForge']/level_requirements[@level='5']">
-		<requirement name="PlayerLevel" operation="GTE" value="80" desc_key="reqAttributeLevelDummy"/>
-	</append>
-
-	<!-- And Update Tooltip?? -->
-	<remove xpath="/progression/perks/perk[@name='perkHammerForge']/level_requirements[@level='5']/requirement[@name='ProgressionLevel']" />
-	<append xpath="/progression/perks/perk[@name='perkHammerForge']/level_requirements[@level='5']">
-		<requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="10" desc_key="reqIntellectLevel10-80"/>
-	</append>
-
-	<!-- Change 4x4 to Level 80? -->
-	<remove xpath="/progression/perks/perk[@name='perkGreaseMonkey']/level_requirements[@level='4']/requirement[@name='PlayerLevel']" />
-	<append xpath="/progression/perks/perk[@name='perkGreaseMonkey']/level_requirements[@level='4']">
-		<requirement name="PlayerLevel" operation="GTE" value="80" desc_key="reqAttributeLevelDummy"/>
-	</append>
-
-	<!-- And Update Tooltip?? -->
-	<remove xpath="/progression/perks/perk[@name='perkGreaseMonkey']/level_requirements[@level='4']/requirement[@name='ProgressionLevel']" />
-	<append xpath="/progression/perks/perk[@name='perkGreaseMonkey']/level_requirements[@level='4']">
-		<requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="9" desc_key="reqIntellectLevel09-80"/>
-	</append>
-
-	<!-- Change Gyro to Level 100? -->
-	<remove xpath="/progression/perks/perk[@name='perkGreaseMonkey']/level_requirements[@level='5']/requirement[@name='PlayerLevel']" />
-	<append xpath="/progression/perks/perk[@name='perkGreaseMonkey']/level_requirements[@level='5']">
-		<requirement name="PlayerLevel" operation="GTE" value="100" desc_key="reqAttributeLevelDummy"/>
-	</append>
-
-	<!-- And Update Tooltip?? -->
-	<remove xpath="/progression/perks/perk[@name='perkGreaseMonkey']/level_requirements[@level='5']/requirement[@name='ProgressionLevel']" />
-	<append xpath="/progression/perks/perk[@name='perkGreaseMonkey']/level_requirements[@level='5']">
-		<requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="10" desc_key="reqIntellectLevel10-100"/>
-	</append>
+	<!-- XP to Level: -->
+	<set xpath="/progression/level/@experience_multiplier">1.0325</set>
 
 	<!-- Leveling points -->
 	<set xpath="/progression/level/@skill_points_per_level">3</set>
+
+	<!-- Craft Quality 6 Items: -->
+	<set xpath="/progression/perks/perk/effect_group/passive_effect[@name='CraftingTier']/@value">1,2,3,4,5</set>
+
+	<!-- Change PackMule to have all tiers purchaseable from Level 1 -->
+	<set xpath="/progression/perks/perk[@name='perkPackMule']/level_requirements/requirement/@desc_key">reqStrengthLevel1</set>
+	<set xpath="/progression/perks/perk[@name='perkPackMule']/level_requirements/requirement/@value">1</set>
+
+	<!-- 60 slot Backpack adjustment -->
+	<set xpath="/progression/perks/perk[@name='perkPackMule']/effect_group/passive_effect[@name='CarryCapacity' and @value='3,6,10,14,18']/@value">4,8,12,16,20</set>
+
+	<!-- Fix lockpicking? -->
+	<set xpath="/progression/perks/perk[@name='perkLockPicking']/effect_group/passive_effect[@name='LockPickTime']/@value">.1,.5</set>
+
+	<!-- Buff ironGut -->
+	<set xpath="/progression/perks/perk[@name='perkSlowMetabolism']/effect_group/passive_effect[@name='WaterLossPerHealthPointGained']/@value">-.1,-.95</set>
+	<set xpath="/progression/perks/perk[@name='perkSlowMetabolism']/effect_group/passive_effect[@name='WaterLossPerStaminaPointGained']/@value">-.1,-.95</set>
+	<set xpath="/progression/perks/perk[@name='perkSlowMetabolism']/effect_group/passive_effect[@name='FoodLossPerStaminaPointGained']/@value">-.1,-.95</set>
+
+	<append xpath="/progression/perks">
+		<perk name="perkBerserker" parent="skillStrengthCombat" name_key="perkBerserkerName" desc_key="perkBerserkerDesc" icon="ui_game_symbol_knunchuck">
+			<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="1" desc_key="reqStrengthLevel01"/></level_requirements>
+			<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="3" desc_key="reqStrengthLevel03"/></level_requirements>
+			<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="5" desc_key="reqStrengthLevel05"/></level_requirements>
+			<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="7" desc_key="reqStrengthLevel07"/></level_requirements>
+			<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="10" desc_key="reqStrengthLevel10"/></level_requirements>
+
+			<effect_group>
+				<requirement name="HoldingItemHasTags" tags="perkSkullCrusher,perkMiner69r,perkJavelinMaster"/>
+				<passive_effect name="AttacksPerMinute" operation="perc_add" level="1,5" value="0.05,0.25"/>
+
+				<effect_description level="1" desc_key="perkBerserkerRank1Desc" long_desc_key="perkBerserkerRank1LongDesc"/>
+				<effect_description level="2" desc_key="perkBerserkerRank2Desc" long_desc_key="perkBerserkerRank2LongDesc"/>
+				<effect_description level="3" desc_key="perkBerserkerRank3Desc" long_desc_key="perkBerserkerRank3LongDesc"/>
+				<effect_description level="4" desc_key="perkBerserkerRank4Desc" long_desc_key="perkBerserkerRank4LongDesc"/>
+				<effect_description level="5" desc_key="perkBerserkerRank5Desc" long_desc_key="perkBerserkerRank5LongDesc"/>
+			</effect_group>
+		</perk>
+	</append>
+
+	<append xpath="/progression/perks">
+		<perk name="turretCommander" max_level="3" parent="skillIntellectCombat" name_key="perkTurretCommanderName" desc_key="perkTurretCommanderDesc" icon="ui_game_symbol_electric_turret">
+			<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="5" desc_key="reqIntellectLevel05"/></level_requirements>
+			<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="7" desc_key="reqIntellectLevel07"/></level_requirements>
+			<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="9" desc_key="reqIntellectLevel09"/></level_requirements>
+
+			<effect_group>
+				<!-- <requirement name="HoldingItemHasTags" tags="perkSkullCrusher,perkMiner69r,perkJavelinMaster"/> -->
+				<!-- <passive_effect name="AttacksPerMinute" operation="perc_add" level="1,5" value="0.05,0.25"/> -->
+
+				<!-- <passive_effect name="JunkTurretActiveCount" operation="base_set" value="0"/> -->
+				<passive_effect name="JunkTurretActiveCount" operation="base_add" level="1,3" value="1,3"/>
+
+				
+				<!-- <passive_effect name="JunkTurretActiveCount" operation="base_add" level="5" value="1"/> -->
+					<!-- JunkTurretActiveCount,  default=1,  A value of 0 means that 1 turret can be active. Value of 2 means 3 turrets will be active. -->
+				<!-- <passive_effect name="JunkTurretActiveRange" operation="base_set" level="0,1,2,3,4,5" value="10,14,15,16,17,18"/> -->
+
+				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" level="1,3" value="0.1,0.3" tags="perkTurrets"/>
+				<passive_effect name="MagazineSize" operation="base_add" level="1,3" value="10,50" tags="perkTurrets"/>
+
+				<effect_description level="1" desc_key="perkTurretCommanderRank1Desc" long_desc_key="perkTurretCommanderRank1LongDesc"/>
+				<effect_description level="2" desc_key="perkTurretCommanderRank2Desc" long_desc_key="perkTurretCommanderRank2LongDesc"/>
+				<effect_description level="3" desc_key="perkTurretCommanderRank3Desc" long_desc_key="perkTurretCommanderRank3LongDesc"/>
+			</effect_group>
+		</perk>
+	</append>
 
 </configs>

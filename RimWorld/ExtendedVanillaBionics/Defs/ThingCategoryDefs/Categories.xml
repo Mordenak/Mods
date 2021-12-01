@@ -6,13 +6,13 @@
 	<ThingCategoryDef>
 		<defName>Cybernetics</defName>
 		<label>cybernetics</label>
-		<parent>BodyPartsArtificial</parent>
+		<parent>BodyParts</parent>
 	</ThingCategoryDef>
    
 	<ThingCategoryDef>
 		<defName>CyberneticImplants</defName>
 		<label>cybernetic implants</label>
-		<parent>BodyPartsArtificial</parent>
+		<parent>BodyParts</parent>
 	</ThingCategoryDef>
 
   

@@ -1,0 +1,1494 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!-- Generic bases -->
+
+    <ThingDef Name="BodyPartCyberneticBase" ParentName="BodyPartBase" Abstract="True">
+        <techLevel>Cybernetics</techLevel>
+        <graphicData>
+            <texPath>Things/Item/Health/HealthItem</texPath>
+            <color>(108,108,108)</color>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>0.80</drawSize>
+        </graphicData>
+        <recipeMaker>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <soundWorking>Recipe_Smith</soundWorking>
+            <unfinishedThingDef>UnfinishedHealthItemBionic</unfinishedThingDef>
+            <skillRequirements>
+                <Crafting>14</Crafting>
+            </skillRequirements>
+            <researchPrerequisite>Cybernetics</researchPrerequisite>
+            <recipeUsers Inherit="False">
+                <li>FabricationBench</li>
+            </recipeUsers>
+        </recipeMaker>
+        <tradeTags>
+            <li>Cybernetics</li>
+        </tradeTags>
+        <thingCategories>
+            <li>Cybernetics</li>
+        </thingCategories>
+        <statBases>
+            <WorkToMake>13000</WorkToMake>
+            <DeteriorationRate>0</DeteriorationRate>
+        </statBases>
+    </ThingDef>
+
+    <HediffDef Name="AddedCyberneticBase" ParentName="ImplantHediffBase" Abstract="True">
+        <hediffClass>Hediff_AddedPart</hediffClass>
+        <defaultLabelColor>(0.99, 0.3, 0.3)</defaultLabelColor>
+    </HediffDef>
+
+    <ThingDef Name="BodyPartCyberneticImplantBase" ParentName="BodyPartBase" Abstract="True">
+        <graphicData>
+            <texPath>Things/Item/Health/HealthItem</texPath>
+            <color>(155,165,148)</color>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>0.80</drawSize>
+        </graphicData>
+        <tradeTags>
+            <li>CyberneticImplants</li>
+        </tradeTags>
+        <thingCategories>
+            <li>CyberneticImplants</li>
+        </thingCategories>
+    </ThingDef>
+
+    <HediffDef Name="CyberneticImplantBase" Abstract="True">
+		<hediffClass>Hediff_Implant</hediffClass>
+		<defaultLabelColor>(0.9, 0.9, 0.6)</defaultLabelColor>
+		<isBad>false</isBad>
+        <addedPartProps>
+            <partEfficiency>1</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+	</HediffDef>
+
+
+    <!-- Cybernetic Eye -->
+    <HediffDef ParentName="AddedCyberneticBase">
+        <defName>CyberneticEye</defName>
+        <label>cybernetic eye</label>
+        <labelNoun>an cybernetic eye</labelNoun>
+        <description>An installed cybernetic eye.</description>
+        <descriptionHyperlinks><ThingDef>CyberneticEye</ThingDef></descriptionHyperlinks>
+        <spawnThingOnRemoved>CyberneticEye</spawnThingOnRemoved>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>1</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Sight</capacity>
+                        <offset>0.2</offset>
+                    </li>
+                </capMods>
+                <statOffsets>
+					<AimingDelayFactor>-0.15</AimingDelayFactor>
+				</statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <ThingDef ParentName="BodyPartCyberneticBase">
+        <defName>CyberneticEye</defName>
+        <label>cybernetic eye</label>
+        <description>An advanced artifical eye. With its biogel nerve-link, internal signal pre-processor, and wide-spectrum sensors, it is better than a biological eye in almost every way. A lattice-dust healing system allows it to recover from damage.</description>
+        <descriptionHyperlinks><RecipeDef>InstallCybernticEye</RecipeDef></descriptionHyperlinks>
+        <techLevel>Spacer</techLevel>
+        <costList>
+            <Plasteel>35</Plasteel>
+            <Uranium>20</Uranium>
+            <ComponentSpacer>6</ComponentSpacer>
+        </costList>
+        <statBases>
+            <MarketValue>2800</MarketValue>
+            <Mass>0.3</Mass>
+        </statBases>
+        <thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+        <techHediffsTags>
+            <li>Advanced</li>
+        </techHediffsTags>
+    </ThingDef>
+
+    <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+        <defName>InstallCybernticEye</defName>
+        <label>install cybernetic eye</label>
+        <description>Install a cybernetic eye.</description>
+        <descriptionHyperlinks><ThingDef>CyberneticEye</ThingDef></descriptionHyperlinks>
+        <jobString>Installing cybernetic eye.</jobString>
+        <ingredients>
+            <li>
+            <filter>
+                <thingDefs>
+                <li>CyberneticEye</li>
+                </thingDefs>
+            </filter>
+            <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+            <li>CyberneticEye</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Eye</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>CyberneticEye</addsHediff>
+    </RecipeDef>
+
+    <!-- Cybernetic Leg -->
+    <HediffDef ParentName="AddedCyberneticBase">
+        <defName>CyberneticLeg</defName>
+        <label>cybernetic leg</label>
+        <labelNoun>an cybernetic leg</labelNoun>
+        <description>An installed cybernetic leg.</description>
+        <descriptionHyperlinks><ThingDef>CyberneticLeg</ThingDef></descriptionHyperlinks>
+        <spawnThingOnRemoved>CyberneticLeg</spawnThingOnRemoved>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>1</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <offset>0.2</offset>
+                    </li>
+                </capMods>
+                <statOffsets>
+					<ArmorRating_Blunt>+0.07</ArmorRating_Blunt>
+					<ArmorRating_Sharp>+0.07</ArmorRating_Sharp>
+					<MeleeDodgeChance>+7</MeleeDodgeChance>
+				</statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <ThingDef ParentName="BodyPartCyberneticBase">
+        <defName>CyberneticLeg</defName>
+        <label>cybernetic leg</label>
+        <description>An advanced artificial leg. With its biogel nerve-link, powerful mini-servos, and lattice-dust healing system, it is better than a biological leg in almost every way.</description>
+        <descriptionHyperlinks><RecipeDef>InstallCyberneticLeg</RecipeDef></descriptionHyperlinks>
+        <techLevel>Spacer</techLevel>
+        <costList>
+            <Plasteel>35</Plasteel>
+            <Uranium>20</Uranium>
+            <ComponentSpacer>6</ComponentSpacer>
+        </costList>
+        <statBases>
+            <MarketValue>2800</MarketValue>
+            <Mass>0.3</Mass>
+        </statBases>
+        <thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+        <techHediffsTags>
+            <li>Advanced</li>
+        </techHediffsTags>
+    </ThingDef>
+
+    <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+        <defName>InstallCyberneticLeg</defName>
+        <label>install cybernetic leg</label>
+        <description>Install a cybernetic leg.</description>
+        <descriptionHyperlinks><ThingDef>CyberneticLeg</ThingDef></descriptionHyperlinks>
+        <jobString>Installing cybernetic leg.</jobString>
+        <ingredients>
+            <li>
+            <filter>
+                <thingDefs>
+                <li>CyberneticLeg</li>
+                </thingDefs>
+            </filter>
+            <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+            <li>CyberneticLeg</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Leg</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>CyberneticLeg</addsHediff>
+    </RecipeDef>
+
+    <!-- Cybernetic Arm -->
+    <HediffDef ParentName="AddedCyberneticBase">
+        <defName>CyberneticArm</defName>
+        <label>cybernetic arm</label>
+        <labelNoun>an cybernetic arm</labelNoun>
+        <description>An installed cybernetic arm.</description>
+        <descriptionHyperlinks><ThingDef>CyberneticArm</ThingDef></descriptionHyperlinks>
+        <spawnThingOnRemoved>CyberneticArm</spawnThingOnRemoved>
+        <comps>
+			<li Class="HediffCompProperties_VerbGiver">
+				<tools>
+					<li>
+						<label>fist</label>
+						<capacities>
+							<li>Blunt</li>
+						</capacities>
+						<power>13</power>
+						<cooldownTime>1.5</cooldownTime>
+					</li>
+				</tools>
+			</li>
+		</comps>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>1</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Manipulation</capacity>
+                        <offset>0.2</offset>
+                    </li>
+                </capMods>
+                <statOffsets>
+					<ArmorRating_Blunt>+0.07</ArmorRating_Blunt>
+					<ArmorRating_Sharp>+0.07</ArmorRating_Sharp>
+				</statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <ThingDef ParentName="BodyPartCyberneticBase">
+        <defName>CyberneticArm</defName>
+        <label>cybernetic arm</label>
+        <description>An advanced artificial arm. Silenced mini-servos give great strength, while the biogel nerve-link gives exquisite control. A lattice-dust healing system allows it to recover from damage. It is better than a biological arm in almost every way.</description>
+        <descriptionHyperlinks><RecipeDef>InstallCyberneticArm</RecipeDef></descriptionHyperlinks>
+        <techLevel>Spacer</techLevel>
+        <costList>
+            <Plasteel>35</Plasteel>
+            <Uranium>20</Uranium>
+            <ComponentSpacer>6</ComponentSpacer>
+        </costList>
+        <statBases>
+            <MarketValue>2800</MarketValue>
+            <Mass>0.3</Mass>
+        </statBases>
+        <thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+        <techHediffsTags>
+            <li>Advanced</li>
+        </techHediffsTags>
+    </ThingDef>
+
+    <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+        <defName>InstallCyberneticArm</defName>
+        <label>install cybernetic arm</label>
+        <description>Install a cybernetic arm.</description>
+        <descriptionHyperlinks><ThingDef>CyberneticArm</ThingDef></descriptionHyperlinks>
+        <jobString>Installing cybernetic arm.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                    <li>CyberneticArm</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>CyberneticArm</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Arm</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>CyberneticArm</addsHediff>
+    </RecipeDef>
+
+    <!-- Cybernetic Spine -->
+    <HediffDef ParentName="AddedCyberneticBase">
+        <defName>CyberneticSpine</defName>
+        <label>cybernetic spine</label>
+        <labelNoun>an cybernetic spine</labelNoun>
+        <description>An installed cybernetic spine.</description>
+        <descriptionHyperlinks><ThingDef>CyberneticSpine</ThingDef></descriptionHyperlinks>
+        <spawnThingOnRemoved>CyberneticSpine</spawnThingOnRemoved>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>1</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+        <stages>
+            <li>
+                <capMods>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>0.2</offset>
+					</li>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>0.2</offset>
+					</li>
+                </capMods>
+                <statOffsets>
+					<ArmorRating_Blunt>+0.04</ArmorRating_Blunt>
+					<ArmorRating_Sharp>+0.04</ArmorRating_Sharp>
+				</statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <ThingDef ParentName="BodyPartCyberneticBase">
+        <defName>CyberneticSpine</defName>
+        <label>cybernetic spine</label>
+        <description>An advanced artificial spine. A biogel nerve bundle runs down an articulated plasteel core, surrounded by a lattice-dust healing system. It matches the performance of a biological spine.</description>
+        <descriptionHyperlinks><RecipeDef>InstallCyberneticSpine</RecipeDef></descriptionHyperlinks>
+        <techLevel>Spacer</techLevel>
+        <costList>
+            <Plasteel>35</Plasteel>
+            <Uranium>20</Uranium>
+            <ComponentSpacer>6</ComponentSpacer>
+        </costList>
+        <statBases>
+            <MarketValue>2800</MarketValue>
+            <Mass>0.3</Mass>
+        </statBases>
+        <techHediffsTags>
+            <li>Advanced</li>
+        </techHediffsTags>
+    </ThingDef>
+
+    <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+        <defName>InstallCyberneticSpine</defName>
+        <label>install cybernetic spine</label>
+        <description>Install a cybernetic spine.</description>
+        <descriptionHyperlinks><ThingDef>CyberneticSpine</ThingDef></descriptionHyperlinks>
+        <jobString>Installing cybernetic spine.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                    <li>CyberneticSpine</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>CyberneticSpine</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Spine</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>CyberneticSpine</addsHediff>
+    </RecipeDef>
+
+    <!-- Cybernetic Heart -->
+    <HediffDef ParentName="AddedCyberneticBase">
+        <defName>CyberneticHeart</defName>
+        <label>cybernetic heart</label>
+        <labelNoun>an cybernetic heart</labelNoun>
+        <description>An installed cybernetic heart.</description>
+        <descriptionHyperlinks><ThingDef>CyberneticHeart</ThingDef></descriptionHyperlinks>
+        <spawnThingOnRemoved>CyberneticHeart</spawnThingOnRemoved>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>1</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+        <stages>
+            <li>
+                <capMods>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>0.3</offset>
+					</li>
+					<li>
+						<capacity>BloodFiltration</capacity>
+						<offset>0.3</offset>
+					</li>
+                </capMods>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <ThingDef ParentName="BodyPartCyberneticBase">
+        <defName>CyberneticHeart</defName>
+        <label>cybernetic heart</label>
+        <description>An advanced artificial heart.</description>
+        <descriptionHyperlinks><RecipeDef>InstallCyberneticHeart</RecipeDef></descriptionHyperlinks>
+        <techLevel>Spacer</techLevel>
+        <costList>
+            <Plasteel>30</Plasteel>
+            <Uranium>20</Uranium>
+            <ComponentSpacer>5</ComponentSpacer>
+        </costList>
+        <statBases>
+            <MarketValue>2800</MarketValue>
+            <Mass>0.3</Mass>
+        </statBases>
+        <techHediffsTags>
+            <li>Advanced</li>
+        </techHediffsTags>
+    </ThingDef>
+
+    <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+        <defName>InstallCyberneticHeart</defName>
+        <label>install cybernetic heart</label>
+        <description>Install a cybernetic heart.</description>
+        <descriptionHyperlinks><ThingDef>CyberneticHeart</ThingDef></descriptionHyperlinks>
+        <jobString>Installing cybernetic heart.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                    <li>CyberneticHeart</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>CyberneticHeart</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Heart</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>CyberneticHeart</addsHediff>
+    </RecipeDef>
+
+    <!-- Cybernetic Stomach -->
+    <HediffDef ParentName="AddedCyberneticBase">
+        <defName>CyberneticStomach</defName>
+        <label>cybernetic stomach</label>
+        <labelNoun>an cybernetic stomach</labelNoun>
+        <description>An installed cybernetic stomach.</description>
+        <descriptionHyperlinks><ThingDef>CyberneticStomach</ThingDef></descriptionHyperlinks>
+        <spawnThingOnRemoved>CyberneticStomach</spawnThingOnRemoved>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>1</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+        <stages>
+            <li>
+                <capMods>
+					<li>
+						<capacity>Metabolism</capacity>
+						<offset>0.3</offset>
+					</li>
+					<li>
+						<capacity>Eating</capacity>
+						<offset>0.3</offset>
+					</li>
+                </capMods>
+                <statOffsets>
+					<HungerRateMultiplier>-0.2</HungerRateMultiplier>
+				</statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <ThingDef ParentName="BodyPartCyberneticBase">
+        <defName>CyberneticStomach</defName>
+        <label>cybernetic stomach</label>
+        <description>An advanced artificial stomach.</description>
+        <descriptionHyperlinks><RecipeDef>InstallCyberneticStomach</RecipeDef></descriptionHyperlinks>
+        <techLevel>Spacer</techLevel>
+        <costList>
+            <Plasteel>30</Plasteel>
+            <Uranium>20</Uranium>
+            <ComponentSpacer>5</ComponentSpacer>
+        </costList>
+        <statBases>
+            <MarketValue>2800</MarketValue>
+            <Mass>0.3</Mass>
+        </statBases>
+        <techHediffsTags>
+            <li>Advanced</li>
+        </techHediffsTags>
+    </ThingDef>
+
+    <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+        <defName>InstallCyberneticStomach</defName>
+        <label>install cybernetic stomach</label>
+        <description>Install a cybernetic stomach.</description>
+        <descriptionHyperlinks><ThingDef>CyberneticStomach</ThingDef></descriptionHyperlinks>
+        <jobString>Installing cybernetic stomach.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                    <li>CyberneticStomach</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>CyberneticStomach</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Stomach</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>CyberneticStomach</addsHediff>
+    </RecipeDef>
+
+    <!-- Cybernetic Ear -->
+    <HediffDef ParentName="AddedCyberneticBase">
+        <defName>CyberneticEar</defName>
+        <label>cybernetic ear</label>
+        <labelNoun>an cybernetic ear</labelNoun>
+        <description>An installed cybernetic ear.</description>
+        <descriptionHyperlinks><ThingDef>CyberneticEar</ThingDef></descriptionHyperlinks>
+        <spawnThingOnRemoved>CyberneticEar</spawnThingOnRemoved>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>1</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+        <stages>
+            <li>
+                <capMods>
+					<li>
+						<capacity>Hearing</capacity>
+						<offset>0.2</offset>
+					</li>
+                </capMods>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <ThingDef ParentName="BodyPartCyberneticBase">
+        <defName>CyberneticEar</defName>
+        <label>cybernetic ear</label>
+        <description>An advanced artificial ear.</description>
+        <descriptionHyperlinks><RecipeDef>InstallCyberneticEar</RecipeDef></descriptionHyperlinks>
+        <techLevel>Spacer</techLevel>
+        <costList>
+            <Plasteel>20</Plasteel>
+            <Uranium>15</Uranium>
+            <ComponentSpacer>3</ComponentSpacer>
+        </costList>
+        <statBases>
+            <MarketValue>2800</MarketValue>
+            <Mass>0.3</Mass>
+        </statBases>
+        <techHediffsTags>
+            <li>Advanced</li>
+        </techHediffsTags>
+    </ThingDef>
+
+    <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+        <defName>InstallCyberneticEar</defName>
+        <label>install cybernetic ear</label>
+        <description>Install a cybernetic ear.</description>
+        <descriptionHyperlinks><ThingDef>CyberneticEar</ThingDef></descriptionHyperlinks>
+        <jobString>Installing cybernetic ear.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                    <li>CyberneticEar</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>CyberneticEar</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Ear</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>CyberneticEar</addsHediff>
+    </RecipeDef>
+
+    <!-- No Bionic Counterpart -->
+
+    <!-- Cybernetic Liver -->
+    <HediffDef ParentName="AddedCyberneticBase">
+        <defName>CyberneticLiver</defName>
+        <label>cybernetic liver</label>
+        <labelNoun>an cybernetic liver</labelNoun>
+        <description>An installed cybernetic liver.</description>
+        <descriptionHyperlinks><ThingDef>CyberneticLiver</ThingDef></descriptionHyperlinks>
+        <spawnThingOnRemoved>CyberneticLiver</spawnThingOnRemoved>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>1</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+        <stages>
+            <li>
+                <capMods>
+					<li>
+						<capacity>BloodFiltration</capacity>
+						<offset>0.3</offset>
+					</li>
+                </capMods>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <ThingDef ParentName="BodyPartCyberneticBase">
+        <defName>CyberneticLiver</defName>
+        <label>cybernetic liver</label>
+        <description>An advanced artificial liver.</description>
+        <descriptionHyperlinks><RecipeDef>InstallCyberneticLiver</RecipeDef></descriptionHyperlinks>
+        <techLevel>Spacer</techLevel>
+        <costList>
+            <Plasteel>40</Plasteel>
+			<ComponentSpacer>4</ComponentSpacer>
+			<Hyperweave>40</Hyperweave>
+        </costList>
+        <statBases>
+            <MarketValue>2800</MarketValue>
+            <Mass>0.3</Mass>
+        </statBases>
+        <techHediffsTags>
+            <li>Advanced</li>
+        </techHediffsTags>
+    </ThingDef>
+
+    <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+        <defName>InstallCyberneticLiver</defName>
+        <label>install cybernetic liver</label>
+        <description>Install a cybernetic liver.</description>
+        <descriptionHyperlinks><ThingDef>CyberneticLiver</ThingDef></descriptionHyperlinks>
+        <jobString>Installing cybernetic liver.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                    <li>CyberneticLiver</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>CyberneticLiver</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Liver</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>CyberneticLiver</addsHediff>
+    </RecipeDef>
+
+    <!-- Cybernetic Lung -->
+    <HediffDef ParentName="AddedCyberneticBase">
+        <defName>CyberneticLung</defName>
+        <label>cybernetic lung</label>
+        <labelNoun>an cybernetic lung</labelNoun>
+        <description>An installed cybernetic lung.</description>
+        <descriptionHyperlinks><ThingDef>CyberneticLung</ThingDef></descriptionHyperlinks>
+        <spawnThingOnRemoved>CyberneticLung</spawnThingOnRemoved>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>1</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+        <stages>
+            <li>
+                <capMods>
+					<li>
+						<capacity>Breathing</capacity>
+						<offset>0.2</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>0.1</offset>
+					</li>
+                </capMods>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <ThingDef ParentName="BodyPartCyberneticBase">
+        <defName>CyberneticLung</defName>
+        <label>cybernetic lung</label>
+        <description>An advanced artificial lung.</description>
+        <descriptionHyperlinks><RecipeDef>InstallCyberneticLung</RecipeDef></descriptionHyperlinks>
+        <techLevel>Spacer</techLevel>
+        <costList>
+            <Plasteel>20</Plasteel>
+			<ComponentSpacer>3</ComponentSpacer>
+			<Hyperweave>20</Hyperweave>
+        </costList>
+        <statBases>
+            <MarketValue>2800</MarketValue>
+            <Mass>0.3</Mass>
+        </statBases>
+        <techHediffsTags>
+            <li>Advanced</li>
+        </techHediffsTags>
+    </ThingDef>
+
+    <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+        <defName>InstallCyberneticLung</defName>
+        <label>install cybernetic lung</label>
+        <description>Install a cybernetic lung.</description>
+        <descriptionHyperlinks><ThingDef>CyberneticLung</ThingDef></descriptionHyperlinks>
+        <jobString>Installing cybernetic lung.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                    <li>CyberneticLung</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>CyberneticLung</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Lung</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>CyberneticLung</addsHediff>
+    </RecipeDef>
+
+    <!-- Cybernetic Kidney -->
+    <HediffDef ParentName="AddedCyberneticBase">
+        <defName>CyberneticKidney</defName>
+        <label>cybernetic kidney</label>
+        <labelNoun>an cybernetic kidney</labelNoun>
+        <description>An installed cybernetic kidney.</description>
+        <descriptionHyperlinks><ThingDef>CyberneticKidney</ThingDef></descriptionHyperlinks>
+        <spawnThingOnRemoved>CyberneticKidney</spawnThingOnRemoved>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>1</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+        <stages>
+            <li>
+                <capMods>
+					<li>
+						<capacity>BloodFiltration</capacity>
+						<offset>0.2</offset>
+					</li>
+                </capMods>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <ThingDef ParentName="BodyPartCyberneticBase">
+        <defName>CyberneticKidney</defName>
+        <label>cybernetic kidney</label>
+        <description>An advanced artificial kidney.</description>
+        <descriptionHyperlinks><RecipeDef>InstallCyberneticKidney</RecipeDef></descriptionHyperlinks>
+        <techLevel>Spacer</techLevel>
+        <costList>
+            <Plasteel>20</Plasteel>
+			<ComponentSpacer>3</ComponentSpacer>
+			<Hyperweave>20</Hyperweave>
+        </costList>
+        <statBases>
+            <MarketValue>2800</MarketValue>
+            <Mass>0.3</Mass>
+        </statBases>
+        <techHediffsTags>
+            <li>Advanced</li>
+        </techHediffsTags>
+    </ThingDef>
+
+    <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+        <defName>InstallCyberneticKidney</defName>
+        <label>install cybernetic kidney</label>
+        <description>Install a cybernetic kidney.</description>
+        <descriptionHyperlinks><ThingDef>CyberneticKidney</ThingDef></descriptionHyperlinks>
+        <jobString>Installing cybernetic kidney.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                    <li>CyberneticKidney</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>CyberneticKidney</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Kidney</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>CyberneticKidney</addsHediff>
+    </RecipeDef>
+
+    <!-- Cybernetic Jaw -->
+    <HediffDef ParentName="AddedCyberneticBase">
+        <defName>CyberneticJaw</defName>
+        <label>cybernetic jaw</label>
+        <labelNoun>an cybernetic jaw</labelNoun>
+        <description>An installed cybernetic jaw.</description>
+        <descriptionHyperlinks><ThingDef>CyberneticJaw</ThingDef></descriptionHyperlinks>
+        <spawnThingOnRemoved>CyberneticJaw</spawnThingOnRemoved>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>1</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+        <stages>
+            <li>
+                <capMods>
+					<li>
+						<capacity>Talking</capacity>
+						<offset>0.3</offset>
+					</li>
+					<li>
+						<capacity>Eating</capacity>
+						<offset>0.3</offset>
+					</li>
+                </capMods>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <ThingDef ParentName="BodyPartCyberneticBase">
+        <defName>CyberneticJaw</defName>
+        <label>cybernetic jaw</label>
+        <description>An advanced artificial jaw.</description>
+        <descriptionHyperlinks><RecipeDef>InstallCyberneticJaw</RecipeDef></descriptionHyperlinks>
+        <techLevel>Spacer</techLevel>
+        <costList>
+            <Plasteel>30</Plasteel>
+            <Uranium>20</Uranium>
+			<ComponentSpacer>4</ComponentSpacer>
+        </costList>
+        <statBases>
+            <MarketValue>2800</MarketValue>
+            <Mass>0.3</Mass>
+        </statBases>
+        <techHediffsTags>
+            <li>Advanced</li>
+        </techHediffsTags>
+    </ThingDef>
+
+    <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+        <defName>InstallCyberneticJaw</defName>
+        <label>install cybernetic jaw</label>
+        <description>Install a cybernetic jaw.</description>
+        <descriptionHyperlinks><ThingDef>CyberneticJaw</ThingDef></descriptionHyperlinks>
+        <jobString>Installing cybernetic jaw.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                    <li>CyberneticJaw</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>CyberneticJaw</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Jaw</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>CyberneticJaw</addsHediff>
+    </RecipeDef>
+
+    <!-- Special implants -->    
+
+    <!-- Shooting Core -->
+    <HediffDef ParentName="CyberneticImplantBase">
+        <defName>ShootingCore</defName>
+        <label>cybernetic core (shooting)</label>
+        <labelNoun>a cybernetic core</labelNoun>
+        <description>An installed cybernetic core.</description>
+        <descriptionHyperlinks><ThingDef>ShootingCore</ThingDef></descriptionHyperlinks>
+        <spawnThingOnRemoved>ShootingCore</spawnThingOnRemoved>
+        <stages>
+			<li>
+				<statOffsets>
+					<ShootingAccuracyPawn>+0.5</ShootingAccuracyPawn>
+					<AimingDelayFactor>-0.25</AimingDelayFactor>
+				</statOffsets>
+			</li>
+		</stages>
+    </HediffDef>
+
+    <ThingDef ParentName="BodyPartCyberneticImplantBase">
+        <defName>ShootingCore</defName>
+        <label>cybernetic core (shooting)</label>
+        <description>A cybernetic core for Shooting.</description>
+        <descriptionHyperlinks><RecipeDef>InstallShootingCore</RecipeDef></descriptionHyperlinks>
+        <techLevel>Spacer</techLevel>
+        <statBases>
+            <MarketValue>7000</MarketValue>
+            <Mass>0.3</Mass>
+        </statBases>
+        <thingSetMakerTags>
+            <li>RewardStandardLowFreq</li>
+        </thingSetMakerTags>
+        <techHediffsTags>
+            <li>Advanced</li>
+        </techHediffsTags>
+    </ThingDef>
+
+    <RecipeDef ParentName="SurgeryInstallImplantBase">
+        <defName>InstallShootingCore</defName>
+        <label>install cybernetic core (shooting)</label>
+        <description>Install a cybernetic core.</description>
+        <descriptionHyperlinks><ThingDef>ShootingCore</ThingDef></descriptionHyperlinks>
+        <jobString>Installing a cybernetic core.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                    <li>ShootingCore</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>ShootingCore</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Brain</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>ShootingCore</addsHediff>
+    </RecipeDef>
+
+    <!-- Diplomat Core -->
+    <HediffDef ParentName="CyberneticImplantBase">
+        <defName>DiplomatCore</defName>
+        <label>cybernetic core (diplomat)</label>
+        <labelNoun>a cybernetic core</labelNoun>
+        <description>An installed cybernetic core.</description>
+        <descriptionHyperlinks><ThingDef>DiplomatCore</ThingDef></descriptionHyperlinks>
+        <spawnThingOnRemoved>DiplomatCore</spawnThingOnRemoved>
+        <stages>
+			<li>
+				<statOffsets>
+					<NegotiationAbility>+0.20</NegotiationAbility>
+					<TradePriceImprovement>+0.1</TradePriceImprovement>
+					<SocialImpact>+0.1</SocialImpact>
+				</statOffsets>
+			</li>
+		</stages>
+    </HediffDef>
+
+    <ThingDef ParentName="BodyPartCyberneticImplantBase">
+        <defName>DiplomatCore</defName>
+        <label>cybernetic core (diplomat)</label>
+        <description>A cybernetic core for Diplomacy.</description>
+        <descriptionHyperlinks><RecipeDef>InstallDiplomatCore</RecipeDef></descriptionHyperlinks>
+        <techLevel>Spacer</techLevel>
+        <statBases>
+            <MarketValue>7000</MarketValue>
+            <Mass>0.3</Mass>
+        </statBases>
+        <thingSetMakerTags>
+            <li>RewardStandardLowFreq</li>
+        </thingSetMakerTags>
+        <techHediffsTags>
+            <li>Advanced</li>
+        </techHediffsTags>
+    </ThingDef>
+
+    <RecipeDef ParentName="SurgeryInstallImplantBase">
+        <defName>InstallDiplomatCore</defName>
+        <label>install cybernetic core (diplomat)</label>
+        <description>Install a cybernetic core.</description>
+        <descriptionHyperlinks><ThingDef>DiplomatCore</ThingDef></descriptionHyperlinks>
+        <jobString>Installing a cybernetic core.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                    <li>DiplomatCore</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>DiplomatCore</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Brain</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>DiplomatCore</addsHediff>
+    </RecipeDef>
+
+    <!-- DoctorCore -->
+    <HediffDef ParentName="CyberneticImplantBase">
+        <defName>DoctorCore</defName>
+        <label>cybernetic core (medical)</label>
+        <labelNoun>a cybernetic core</labelNoun>
+        <description>An installed cybernetic core.</description>
+        <descriptionHyperlinks><ThingDef>DoctorCore</ThingDef></descriptionHyperlinks>
+        <spawnThingOnRemoved>DoctorCore</spawnThingOnRemoved>
+        <stages>
+			<li>
+				<statOffsets>
+					<MedicalSurgerySuccessChance>+0.15</MedicalSurgerySuccessChance>
+					<MedicalTendQuality>+0.25</MedicalTendQuality>
+					<MedicalTendSpeed>+0.25</MedicalTendSpeed>
+				</statOffsets>
+			</li>
+		</stages>
+    </HediffDef>
+
+    <ThingDef ParentName="BodyPartCyberneticImplantBase">
+        <defName>DoctorCore</defName>
+        <label>cybernetic core (medical)</label>
+        <description>A cybernetic core for Medical.</description>
+        <descriptionHyperlinks><RecipeDef>InstallDoctorCore</RecipeDef></descriptionHyperlinks>
+        <techLevel>Spacer</techLevel>
+        <statBases>
+            <MarketValue>7000</MarketValue>
+            <Mass>0.3</Mass>
+        </statBases>
+        <thingSetMakerTags>
+            <li>RewardStandardLowFreq</li>
+        </thingSetMakerTags>
+        <techHediffsTags>
+            <li>Advanced</li>
+        </techHediffsTags>
+    </ThingDef>
+
+    <RecipeDef ParentName="SurgeryInstallImplantBase">
+        <defName>InstallDoctorCore</defName>
+        <label>install cybernetic core (medical)</label>
+        <description>Install a cybernetic core.</description>
+        <descriptionHyperlinks><ThingDef>DoctorCore</ThingDef></descriptionHyperlinks>
+        <jobString>Installing a cybernetic core.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                    <li>DoctorCore</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>DoctorCore</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Brain</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>DoctorCore</addsHediff>
+    </RecipeDef>
+
+    <!-- ConstructorCore -->
+    <HediffDef ParentName="CyberneticImplantBase">
+        <defName>ConstructorCore</defName>
+        <label>cybernetic core (construction)</label>
+        <labelNoun>a cybernetic core</labelNoun>
+        <description>An installed cybernetic core.</description>
+        <descriptionHyperlinks><ThingDef>ConstructorCore</ThingDef></descriptionHyperlinks>
+        <spawnThingOnRemoved>ConstructorCore</spawnThingOnRemoved>
+        <stages>
+			<li>
+				<statOffsets>
+					<ConstructionSpeed>+0.25</ConstructionSpeed>
+                    <SmoothingSpeed>+0.25</SmoothingSpeed>
+					<ConstructSuccessChance>+0.15</ConstructSuccessChance>
+				</statOffsets>
+			</li>
+		</stages>
+    </HediffDef>
+
+    <ThingDef ParentName="BodyPartCyberneticImplantBase">
+        <defName>ConstructorCore</defName>
+        <label>cybernetic core (construction)</label>
+        <description>A cybernetic core for Construction.</description>
+        <descriptionHyperlinks><RecipeDef>InstallConstructorCore</RecipeDef></descriptionHyperlinks>
+        <techLevel>Spacer</techLevel>
+        <statBases>
+            <MarketValue>7000</MarketValue>
+            <Mass>0.3</Mass>
+        </statBases>
+        <thingSetMakerTags>
+            <li>RewardStandardLowFreq</li>
+        </thingSetMakerTags>
+        <techHediffsTags>
+            <li>Advanced</li>
+        </techHediffsTags>
+    </ThingDef>
+
+    <RecipeDef ParentName="SurgeryInstallImplantBase">
+        <defName>InstallConstructorCore</defName>
+        <label>install cybernetic core (construction)</label>
+        <description>Install a cybernetic core.</description>
+        <descriptionHyperlinks><ThingDef>ConstructorCore</ThingDef></descriptionHyperlinks>
+        <jobString>Installing a cybernetic core.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                    <li>ConstructorCore</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>ConstructorCore</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Brain</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>ConstructorCore</addsHediff>
+    </RecipeDef>
+
+    <!-- MeleeCore -->
+    <HediffDef ParentName="CyberneticImplantBase">
+        <defName>MeleeCore</defName>
+        <label>cybernetic core (melee)</label>
+        <labelNoun>a cybernetic core</labelNoun>
+        <description>An installed cybernetic core.</description>
+        <descriptionHyperlinks><ThingDef>MeleeCore</ThingDef></descriptionHyperlinks>
+        <spawnThingOnRemoved>MeleeCore</spawnThingOnRemoved>
+        <stages>
+			<li>
+				<statOffsets>
+					<MeleeHitChance>+5.0</MeleeHitChance>
+					<MeleeDodgeChance>+10</MeleeDodgeChance>
+				</statOffsets>
+			</li>
+		</stages>
+    </HediffDef>
+
+    <ThingDef ParentName="BodyPartCyberneticImplantBase">
+        <defName>MeleeCore</defName>
+        <label>cybernetic core (melee)</label>
+        <description>A cybernetic core for Construction.</description>
+        <descriptionHyperlinks><RecipeDef>InstallMeleeCore</RecipeDef></descriptionHyperlinks>
+        <techLevel>Spacer</techLevel>
+        <statBases>
+            <MarketValue>7000</MarketValue>
+            <Mass>0.3</Mass>
+        </statBases>
+        <thingSetMakerTags>
+            <li>RewardStandardLowFreq</li>
+        </thingSetMakerTags>
+        <techHediffsTags>
+            <li>Advanced</li>
+        </techHediffsTags>
+    </ThingDef>
+
+    <RecipeDef ParentName="SurgeryInstallImplantBase">
+        <defName>InstallMeleeCore</defName>
+        <label>install cybernetic core (melee)</label>
+        <description>Install a cybernetic core.</description>
+        <descriptionHyperlinks><ThingDef>MeleeCore</ThingDef></descriptionHyperlinks>
+        <jobString>Installing a cybernetic core.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                    <li>MeleeCore</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>MeleeCore</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Brain</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>MeleeCore</addsHediff>
+    </RecipeDef>
+
+    <!-- FarmerCore -->
+    <HediffDef ParentName="CyberneticImplantBase">
+        <defName>FarmerCore</defName>
+        <label>cybernetic core (farming)</label>
+        <labelNoun>a cybernetic core</labelNoun>
+        <description>An installed cybernetic core.</description>
+        <descriptionHyperlinks><ThingDef>FarmerCore</ThingDef></descriptionHyperlinks>
+        <spawnThingOnRemoved>FarmerCore</spawnThingOnRemoved>
+        <stages>
+			<li>
+				<statOffsets>
+					<PlantWorkSpeed>+0.25</PlantWorkSpeed>
+					<PlantHarvestYield>0.25</PlantHarvestYield>
+				</statOffsets>
+			</li>
+		</stages>
+    </HediffDef>
+
+    <ThingDef ParentName="BodyPartCyberneticImplantBase">
+        <defName>FarmerCore</defName>
+        <label>cybernetic core (farming)</label>
+        <description>A cybernetic core for Farming.</description>
+        <descriptionHyperlinks><RecipeDef>InstallFarmerCore</RecipeDef></descriptionHyperlinks>
+        <techLevel>Spacer</techLevel>
+        <statBases>
+            <MarketValue>7000</MarketValue>
+            <Mass>0.3</Mass>
+        </statBases>
+        <thingSetMakerTags>
+            <li>RewardStandardLowFreq</li>
+        </thingSetMakerTags>
+        <techHediffsTags>
+            <li>Advanced</li>
+        </techHediffsTags>
+    </ThingDef>
+
+    <RecipeDef ParentName="SurgeryInstallImplantBase">
+        <defName>InstallFarmerCore</defName>
+        <label>install cybernetic core (farming)</label>
+        <description>Install a cybernetic core.</description>
+        <descriptionHyperlinks><ThingDef>FarmerCore</ThingDef></descriptionHyperlinks>
+        <jobString>Installing a cybernetic core.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                    <li>FarmerCore</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>FarmerCore</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Brain</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>FarmerCore</addsHediff>
+    </RecipeDef>
+
+    <!-- MinerCore -->
+    <HediffDef ParentName="CyberneticImplantBase">
+        <defName>MinerCore</defName>
+        <label>cybernetic core (mining)</label>
+        <labelNoun>a cybernetic core</labelNoun>
+        <description>An installed cybernetic core.</description>
+        <descriptionHyperlinks><ThingDef>MinerCore</ThingDef></descriptionHyperlinks>
+        <spawnThingOnRemoved>MinerCore</spawnThingOnRemoved>
+        <stages>
+			<li>
+				<statOffsets>
+					<MiningSpeed>+0.25</MiningSpeed>
+					<MiningYield>0.25</MiningYield>
+				</statOffsets>
+			</li>
+		</stages>
+    </HediffDef>
+
+    <ThingDef ParentName="BodyPartCyberneticImplantBase">
+        <defName>MinerCore</defName>
+        <label>cybernetic core (mining)</label>
+        <description>A cybernetic core for Mining.</description>
+        <descriptionHyperlinks><RecipeDef>InstallMinerCore</RecipeDef></descriptionHyperlinks>
+        <techLevel>Spacer</techLevel>
+        <statBases>
+            <MarketValue>7000</MarketValue>
+            <Mass>0.3</Mass>
+        </statBases>
+        <thingSetMakerTags>
+            <li>RewardStandardLowFreq</li>
+        </thingSetMakerTags>
+        <techHediffsTags>
+            <li>Advanced</li>
+        </techHediffsTags>
+    </ThingDef>
+
+    <RecipeDef ParentName="SurgeryInstallImplantBase">
+        <defName>InstallMinerCore</defName>
+        <label>install cybernetic core (mining)</label>
+        <description>Install a cybernetic core.</description>
+        <descriptionHyperlinks><ThingDef>MinerCore</ThingDef></descriptionHyperlinks>
+        <jobString>Installing a cybernetic core.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                    <li>MinerCore</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>MinerCore</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Brain</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>MinerCore</addsHediff>
+    </RecipeDef>
+
+    <!-- WorkerCore -->
+    <HediffDef ParentName="CyberneticImplantBase">
+        <defName>WorkerCore</defName>
+        <label>cybernetic core (worker)</label>
+        <labelNoun>a cybernetic core</labelNoun>
+        <description>An installed cybernetic core.</description>
+        <descriptionHyperlinks><ThingDef>WorkerCore</ThingDef></descriptionHyperlinks>
+        <spawnThingOnRemoved>WorkerCore</spawnThingOnRemoved>
+        <stages>
+			<li>
+				<statOffsets>
+					<WorkSpeedGlobal>+0.25</WorkSpeedGlobal>
+				</statOffsets>
+			</li>
+		</stages>
+    </HediffDef>
+
+    <ThingDef ParentName="BodyPartCyberneticImplantBase">
+        <defName>WorkerCore</defName>
+        <label>cybernetic core (worker)</label>
+        <description>A cybernetic core for Industry.</description>
+        <descriptionHyperlinks><RecipeDef>InstallWorkerCore</RecipeDef></descriptionHyperlinks>
+        <techLevel>Spacer</techLevel>
+        <statBases>
+            <MarketValue>7000</MarketValue>
+            <Mass>0.3</Mass>
+        </statBases>
+        <thingSetMakerTags>
+            <li>RewardStandardLowFreq</li>
+        </thingSetMakerTags>
+        <techHediffsTags>
+            <li>Advanced</li>
+        </techHediffsTags>
+    </ThingDef>
+
+    <RecipeDef ParentName="SurgeryInstallImplantBase">
+        <defName>InstallWorkerCore</defName>
+        <label>install cybernetic core (worker)</label>
+        <description>Install a cybernetic core.</description>
+        <descriptionHyperlinks><ThingDef>WorkerCore</ThingDef></descriptionHyperlinks>
+        <jobString>Installing a cybernetic core.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                    <li>WorkerCore</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>WorkerCore</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Brain</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>WorkerCore</addsHediff>
+    </RecipeDef>
+
+    <!-- AnimalCore -->
+    <HediffDef ParentName="CyberneticImplantBase">
+        <defName>AnimalCore</defName>
+        <label>cybernetic core (animals)</label>
+        <labelNoun>a cybernetic core</labelNoun>
+        <description>An installed cybernetic core.</description>
+        <descriptionHyperlinks><ThingDef>AnimalCore</ThingDef></descriptionHyperlinks>
+        <spawnThingOnRemoved>AnimalCore</spawnThingOnRemoved>
+        <stages>
+			<li>
+				<statOffsets>
+                    <TameAnimalChance>+0.10</TameAnimalChance>
+                    <TrainAnimalChance>+0.10</TrainAnimalChance>
+					<AnimalGatherSpeed>+0.25</AnimalGatherSpeed>
+					<AnimalGatherYield>+0.25</AnimalGatherYield>
+				</statOffsets>
+			</li>
+		</stages>
+    </HediffDef>
+
+    <ThingDef ParentName="BodyPartCyberneticImplantBase">
+        <defName>AnimalCore</defName>
+        <label>cybernetic core (animals)</label>
+        <description>A cybernetic core for Animals.</description>
+        <descriptionHyperlinks><RecipeDef>InstallAnimalCore</RecipeDef></descriptionHyperlinks>
+        <techLevel>Spacer</techLevel>
+        <statBases>
+            <MarketValue>7000</MarketValue>
+            <Mass>0.3</Mass>
+        </statBases>
+        <thingSetMakerTags>
+            <li>RewardStandardLowFreq</li>
+        </thingSetMakerTags>
+        <techHediffsTags>
+            <li>Advanced</li>
+        </techHediffsTags>
+    </ThingDef>
+
+    <RecipeDef ParentName="SurgeryInstallImplantBase">
+        <defName>InstallAnimalCore</defName>
+        <label>install cybernetic core (animals)</label>
+        <description>Install a cybernetic core.</description>
+        <descriptionHyperlinks><ThingDef>AnimalCore</ThingDef></descriptionHyperlinks>
+        <jobString>Installing a cybernetic core.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                    <li>AnimalCore</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>AnimalCore</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Brain</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>AnimalCore</addsHediff>
+    </RecipeDef>
+  
+</Defs>

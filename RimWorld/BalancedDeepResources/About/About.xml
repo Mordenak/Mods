@@ -2,6 +2,10 @@
 <ModMetaData>
 	<name>BalancedDeepResources</name>
 	<author>Mordenak</author>
-	<targetVersion>0.19.1987</targetVersion>
+	<packageId>Mordenak.BalancedDeepResources</packageId>
+	<supportedVersions>
+    <li>1.1</li>
+    <li>1.2</li>
+  </supportedVersions>
   <description>Undoes a bit of the 1987 nerf, but not entirely to prior levels for deep resources.</description>
 </ModMetaData>

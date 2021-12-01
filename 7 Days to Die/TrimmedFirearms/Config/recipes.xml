@@ -1,0 +1,43 @@
+<configs>
+	<append xpath="/recipes">
+
+		<recipe name="Spaz12" craft_area="workbench" craft_time="300" count="1" tags="learnable,perkAdvancedFirearms,firearmCrafting">
+			<ingredient name="resourceForgedSteel" count="40"/>
+			<ingredient name="resourceMechanicalParts" count="15"/>
+			<ingredient name="resourceDuctTape" count="10"/>
+			<ingredient name="resourceScrapPolymers" count="8"/>
+			<ingredient name="resourceSpring" count="6"/>
+			<effect_group>
+				<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value=".5,2.5" tags="resourceForgedSteel,resourceMechanicalParts,resourceDuctTape,resourceScrapPolymers,resourceSpring"/>
+			</effect_group>
+		</recipe>
+
+		<recipe name="M4A1" craft_area="workbench" craft_time="300" count="1" tags="learnable,perkAdvancedFirearms,firearmCrafting">
+			<ingredient name="resourceForgedSteel" count="40"/>
+			<ingredient name="resourceMechanicalParts" count="15"/>
+			<ingredient name="resourceDuctTape" count="10"/>
+			<ingredient name="resourceScrapPolymers" count="8"/>
+			<ingredient name="resourceSpring" count="6"/>
+			<effect_group>
+				<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value=".5,2.5" tags="resourceForgedSteel,resourceMechanicalParts,resourceDuctTape,resourceScrapPolymers,resourceSpring"/>
+			</effect_group>
+		</recipe>
+
+		<!-- Advanced Bullets -->
+		<recipe name="resourceAdvancedBulletTip" count="1" material_based="true" craft_area="forge" tags="perkAdvancedEngineering">
+			<ingredient name="unit_lead" count="3"/>
+			<ingredient name="unit_iron" count="10"/>
+			<ingredient name="unit_clay" count="1"/>
+			<effect_group>
+				<passive_effect name="CraftingIngredientCount" operation="perc_add" level="0,1,2,3,4" value=".25,.25,.25,.177,.12" tags="unit_lead"/>
+			</effect_group>
+		</recipe>
+
+		<recipe name="ammo762mmAdvancedBullet" count="1" craft_area="workbench" tags="workbenchCrafting">
+			<ingredient name="resourceAdvancedBulletTip" count="1"/>
+			<ingredient name="resourceGunPowder" count="3"/>
+			<ingredient name="resourceBulletCasing" count="1"/>
+		</recipe>
+
+	</append>
+</configs>

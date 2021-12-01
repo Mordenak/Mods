@@ -1,13 +1,57 @@
 <configs>
 
+	<!-- Remove whatever this is in b153? -->
+	<remove xpath="/blocks/block[@name='rockResource']/drop[@event='Destroy']" />
+	<remove xpath="/blocks/block[@name='terrStone']/drop[@event='Destroy']" />
+	<remove xpath="/blocks/block[@name='terrOreIron']/drop[@event='Destroy']" />
+	<remove xpath="/blocks/block[@name='terrOreLead']/drop[@event='Destroy']" />
+	<remove xpath="/blocks/block[@name='terrOrePotassiumNitrate']/drop[@event='Destroy']" />
+	<remove xpath="/blocks/block[@name='terrOreCoal']/drop[@event='Destroy']" />
+	<!-- <remove xpath="/blocks/block[@name='terrOreSilver']/drop[@event='Destroy']" />
+	<remove xpath="/blocks/block[@name='terrOreGold']/drop[@event='Destroy']" />
+	<remove xpath="/blocks/block[@name='terrOreDiamond']/drop[@event='Destroy']" /> -->
+
 	<append xpath="/blocks/block[@name='rockResource']">
-		<drop event="Harvest" name="High Quality Metal Fragments" count="1,6" prob="0.18" tag="oreWoodHarvest"/>
-		<drop event="Harvest" name="Cobalt Fragment" count="1" prob="0.03" tag="oreWoodHarvest"/>
+		<!-- <drop event="Harvest" name="High Quality Metal Fragments" count="1,6" prob="0.18" tag="oreWoodHarvest"/> -->
+		<!-- <drop event="Harvest" name="resourceCobaltFragment" count="2,8" prob="0.5" tag="oreWoodHarvest"/> -->
+		<drop event="Destroy" name="resourceCobaltFragment" count="1,4" prob="0.25"/>
+	</append>
+
+	<append xpath="/blocks/block[@name='oreBoulderMaster']">
+		<!-- <drop event="Harvest" name="High Quality Metal Fragments" count="1,6" prob="0.18" tag="oreWoodHarvest"/> -->
+		<drop event="Destroy" name="resourceCobaltFragment" count="1,4" prob="0.25"/>
+	</append>
+
+	<append xpath="/blocks/block[@name='terrStone']">
+		<drop event="Destroy" name="resourceCobaltFragment" count="1" prob="0.1"/>
 	</append>
 
 	<append xpath="/blocks/block[@name='terrOreIron']">
-		<drop event="Harvest" name="High Quality Metal Fragments" count="1,8" prob="0.13" tag="oreWoodHarvest"/>
-		<drop event="Harvest" name="Cobalt Fragment" count="1" prob="0.02" tag="oreWoodHarvest"/>
+		<drop event="Destroy" name="resourceCobaltFragment" count="1,2" prob="0.15"/>
+	</append>
+
+	<append xpath="/blocks/block[@name='terrOreLead']">
+		<drop event="Destroy" name="resourceCobaltFragment" count="1" prob="0.15"/>
+	</append>
+
+	<append xpath="/blocks/block[@name='terrOrePotassiumNitrate']">
+		<drop event="Destroy" name="resourceCobaltFragment" count="1" prob="0.15"/>
+	</append>
+
+	<append xpath="/blocks/block[@name='terrOreCoal']">
+		<drop event="Destroy" name="resourceCobaltFragment" count="1" prob="0.15"/>
+	</append>
+
+	<append xpath="/blocks/block[@name='terrOreSilver']">
+		<drop event="Destroy" name="resourceCobaltFragment" count="1" prob="0.2"/>
+	</append>
+
+	<append xpath="/blocks/block[@name='terrOreGold']">
+		<drop event="Destroy" name="resourceCobaltFragment" count="1" prob="0.2"/>
+	</append>
+
+	<append xpath="/blocks/block[@name='terrOreDiamond']">
+		<drop event="Destroy" name="resourceCobaltFragment" count="1,2" prob="0.3"/>
 	</append>
 
 </configs>

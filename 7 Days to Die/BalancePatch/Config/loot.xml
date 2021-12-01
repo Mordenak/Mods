@@ -1,27 +1,42 @@
 <configs>
 
-<!-- Examples
-	<insertBefore xpath="/lootcontainers/lootgroup[@name='questChallenge']">
-
-		<lootgroup name="luger" count="all">
-			<item name="Luger" count="1"/>
-			<item name="9x19mm Bullet" count="8,24"/>
-		</lootgroup>
-
-	</insertBefore>
-
-	<append xpath="/lootcontainers/lootcontainer[@id='6']">	
-		<item group="luger" count="1" prob="0.6"/>	
-	</append>
--->
+	<!-- Fix birds nests: -->
+	<set xpath="/lootcontainers/lootgroup[@name='groupBirdNest']/item[@name='resourceFeather']/@count">5,20</set>
+	<set xpath="/lootcontainers/lootgroup[@name='groupBirdNest']/item[@name='foodEgg']/@prob">0.4</set>
 
 	<append xpath="/lootcontainers/lootgroup[@name='modGunT2']">
-		<item name="Steel Hammer"/>
-		<item name="High Tension String"/>
+		<item name="modGunSteelHammer"/>
+		<item name="modGunBowHighTensionString"/>
 	</append>
 
 	<append xpath="/lootcontainers/lootgroup[@name='modGunT3']">
-		<item name="Titanium Hammer"/>
+		<item name="modGunTitaniumHammer"/>
 	</append>
+
+	<append xpath="/lootcontainers/lootgroup[@name='workingStiffsSub']">
+		<item name="meleeToolPickaxeTitanium" prob="0.07"/>
+	</append>
+
+	<!-- <append xpath="/lootcontainers/lootgroup[@name='groupQuestTools']">
+		<item name="meleeToolPickaxeTitanium" loot_prob_template="GradeCLoot"/>
+	</append> -->
+
+	<!-- groupQuestMods -->
+
+	<!-- Add in the legendary drops to only chests: -->
+	<insertBefore xpath="/lootcontainers/lootgroup[@name='groupHeroChestLootSub']">
+		<lootgroup name="groupLegendaries">
+			<item name="modArmorTheDistance" prob="0.4"/>
+			<item name="modArmorMotionActuators" prob="0.4"/>
+			<!-- <item name="meleeToolPickaxeTitanium"/> -->
+		</lootgroup>
+	</insertBefore>
+
+	<append xpath="/lootcontainers/lootgroup[@name='groupHeroChestLootSub']">
+		<item group="groupLegendaries" prob="0.01"/>
+	</append>
+
+	<!-- Make player dropped bags bigger to accomodate new size-->
+	<set xpath="/lootcontainers/lootcontainer[@id='2']/@size">8,10</set>
 
 </configs>

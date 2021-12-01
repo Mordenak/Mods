@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>
+			/Defs/ThingDef[@ParentName="PlantBase"]/plant/sowTags
+		</xpath>
+		<value>
+			<li>AdvancedHydroponic</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>
+			/Defs/ThingDef[@ParentName="HealrootBase"]/plant/sowTags
+		</xpath>
+		<value>
+			<li>AdvancedHydroponic</li>
+		</value>
+	</Operation>
+
+</Patch>

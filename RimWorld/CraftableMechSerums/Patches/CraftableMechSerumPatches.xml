@@ -10,7 +10,7 @@
 				<skillRequirements>
 					<Crafting>15</Crafting>
 				</skillRequirements>
-				<researchPrerequisite>Bionics</researchPrerequisite>
+				<researchPrerequisite>MechSerums</researchPrerequisite>
 				<recipeUsers Inherit="False">
 					<li>DrugLab</li>
 				</recipeUsers>
@@ -32,7 +32,7 @@
 				<skillRequirements>
 					<Crafting>20</Crafting>
 				</skillRequirements>
-				<researchPrerequisite>Bionics</researchPrerequisite>
+				<researchPrerequisite>MechSerums</researchPrerequisite>
 				<recipeUsers Inherit="False">
 					<li>DrugLab</li>
 				</recipeUsers>
@@ -50,7 +50,7 @@
 			/Defs/ThingDef[defName = "MechSerumHealer" or defName = "MechSerumResurrector"]/statBases
 		</xpath>
 		<value>
-			<WorkToMake>15000</WorkToMake>
+			<WorkToMake>4500</WorkToMake>
 			<Mass>0.1</Mass>
 		</value>
 	</Operation>

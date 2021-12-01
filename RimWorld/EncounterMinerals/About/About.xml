@@ -2,6 +2,10 @@
 <ModMetaData>
 	<name>EncounterMinerals</name>
 	<author>Mordenak</author>
-	<targetVersion>0.19.1987</targetVersion>
+	<packageId>Mordenak.EncounterMinerals</packageId>
+	<supportedVersions>
+    <li>1.1</li>
+    <li>1.2</li>
+  </supportedVersions>
   <description>Allows minerals to spawn in encounter maps.</description>
 </ModMetaData>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ResearchProjectDef>
+		<defName>MechSerums</defName>
+		<label>Mech Serums</label>
+		<description>Learn how to create advanced mech serums.</description>
+		<baseCost>8000</baseCost>
+		<techLevel>Spacer</techLevel>
+		<prerequisites>
+			<li>AdvancedFabrication</li>
+		</prerequisites>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+		</requiredResearchFacilities>
+		<tab>Extended</tab>
+		<researchViewX>0.00</researchViewX>
+    	<researchViewY>4.0</researchViewY>
+	</ResearchProjectDef>
+
+</Defs>

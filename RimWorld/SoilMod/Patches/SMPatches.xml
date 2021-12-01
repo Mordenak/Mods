@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<!-- RW Defaults: 1
+	-->
+
+	<!--
+	<Operation Class="PatchOperationAdd">
+		<xpath>
+			/Defs/TerrainDef[defName="Soil"]
+		</xpath>
+		<value>
+			<designationCategory>Floors</designationCategory>
+			<constructEffect>ConstructDirt</constructEffect>
+			<terrainAffordanceNeeded>SmoothableStone</terrainAffordanceNeeded>
+			<researchPrerequisites><li>stoneToSoil</li></researchPrerequisites>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>
+			/Defs/TerrainDef[defName="Soil"]/statBases
+		</xpath>
+		<value>
+            	<WorkToBuild>3000</WorkToBuild>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>
+			/Defs/TerrainDef[defName="SoilRich"]
+		</xpath>
+		<value>
+			<designationCategory>Floors</designationCategory>
+			<constructEffect>ConstructDirt</constructEffect>
+			<terrainAffordanceNeeded>GrowSoil</terrainAffordanceNeeded>
+			<researchPrerequisites><li>enrichSoil</li></researchPrerequisites>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>
+			/Defs/TerrainDef[defName="SoilRich"]/statBases
+		</xpath>
+		<value>
+            	<WorkToBuild>6000</WorkToBuild>
+		</value>
+	</Operation>
+	-->
+
+
+</Patch>

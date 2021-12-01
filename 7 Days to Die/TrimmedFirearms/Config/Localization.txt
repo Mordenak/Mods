@@ -1,0 +1,5 @@
+Key,Source,Context,Changes,English
+resourceAdvancedBulletTip,items,Item,KgNone,Advanced Bullet Tip
+resourceAdvancedBulletTipDesc,items,Item,KgNone,An advanced bullet tip for crafting Advanced Rounds
+ammo762mmAdvancedBullet,items,Ammo,KgNone,7.62x51mm Ammo
+ammo762mmAdvancedBulletDesc,items,Ammo,KgNone,An advanced 7.62x51mm Rifle round

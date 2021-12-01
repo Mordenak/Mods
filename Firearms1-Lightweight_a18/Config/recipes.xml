@@ -1,0 +1,222 @@
+<configs>
+<append xpath="/recipes">
+
+<!--
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+									Handguns
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->
+
+<recipe name="1911" craft_area="workbench" count="1" tags="learnable,perkAdvancedFirearms,firearmCrafting">
+	<ingredient name="resourceForgedSteel" count="40"/>
+	<ingredient name="resourceMechanicalParts" count="25"/>
+	<ingredient name="resourceDuctTape" count="6"/>
+	<ingredient name="resourceScrapPolymers" count="20"/>
+	<ingredient name="resourceSpring" count="10"/>
+</recipe>
+
+<recipe name="Desert Eagle" craft_area="workbench" count="1" tags="learnable,perkAdvancedFirearms,firearmCrafting">
+	<ingredient name="resourceForgedSteel" count="40"/>
+	<ingredient name="resourceMechanicalParts" count="25"/>
+	<ingredient name="resourceDuctTape" count="8"/>
+	<ingredient name="resourceScrapPolymers" count="20"/>
+	<ingredient name="resourceSpring" count="10"/>
+</recipe>
+<!--
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+									SMG's
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->
+<recipe name="MP5" craft_area="workbench"  count="1" tags="learnable,perkAdvancedFirearms,firearmCrafting">
+	<ingredient name="resourceForgedIron" count="150"/>
+	<ingredient name="resourceMechanicalParts" count="4"/>
+	<ingredient name="resourceDuctTape" count="4"/>
+	<ingredient name="resourceScrapPolymers" count="20"/>
+	<ingredient name="resourceSpring" count="2"/>
+</recipe>
+<!--
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+									Shot
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->
+
+<recipe name="Spaz12" craft_area="workbench"  count="1" tags="learnable,perkAdvancedFirearms,firearmCrafting">
+	<ingredient name="resourceForgedSteel" count="85"/>
+	<ingredient name="resourceMechanicalParts" count="40"/>
+	<ingredient name="resourceDuctTape" count="20"/>
+	<ingredient name="resourceScrapPolymers" count="10"/>
+	<ingredient name="resourceSpring" count="12"/>
+</recipe>
+
+<!--
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+									Rifles
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->
+
+<recipe name="M16" craft_area="workbench"  count="1" tags="learnable,perkAdvancedFirearms,firearmCrafting">
+	<ingredient name="resourceForgedIron" count="150"/>
+	<ingredient name="resourceMechanicalParts" count="30"/>
+	<ingredient name="resourceDuctTape" count="5"/>
+	<ingredient name="resourceScrapPolymers" count="10"/>
+	<ingredient name="resourceSpring" count="8"/>
+</recipe>
+
+<recipe name="AR15" craft_area="workbench"  count="1" tags="learnable,perkAdvancedFirearms,firearmCrafting">
+	<ingredient name="resourceForgedIron" count="150"/>
+	<ingredient name="resourceMechanicalParts" count="30"/>
+	<ingredient name="resourceDuctTape" count="5"/>
+	<ingredient name="resourceScrapPolymers" count="10"/>
+	<ingredient name="resourceSpring" count="8"/>
+</recipe>
+
+<recipe name="FN FAL" craft_area="workbench"  count="1" tags="learnable,perkAdvancedFirearms,firearmCrafting">
+	<ingredient name="resourceForgedIron" count="150"/>
+	<ingredient name="resourceMechanicalParts" count="40"/>
+	<ingredient name="resourceDuctTape" count="5"/>
+	<ingredient name="resourceScrapPolymers" count="10"/>
+	<ingredient name="resourceSpring" count="7"/>
+</recipe>
+
+<recipe name="SCAR" craft_area="workbench"  count="1" tags="learnable,perkAdvancedFirearms,firearmCrafting">
+	<ingredient name="resourceForgedSteel" count="65"/>
+	<ingredient name="resourceMechanicalParts" count="40"/>
+	<ingredient name="resourceDuctTape" count="12"/>
+	<ingredient name="resourceScrapPolymers" count="10"/>
+	<ingredient name="resourceSpring" count="10"/>
+</recipe>
+
+<recipe name="AK47" craft_area="workbench"  count="1" tags="learnable,perkAdvancedFirearms,firearmCrafting">
+	<ingredient name="resourceForgedSteel" count="65"/>
+	<ingredient name="resourceMechanicalParts" count="40"/>
+	<ingredient name="resourceDuctTape" count="10"/>
+	<ingredient name="resourceScrapPolymers" count="10"/>
+	<ingredient name="resourceSpring" count="8"/>
+</recipe>
+
+<recipe name="M4A1" craft_area="workbench"  count="1" tags="learnable,perkAdvancedFirearms,firearmCrafting">
+	<ingredient name="resourceForgedSteel" count="65"/>
+	<ingredient name="resourceMechanicalParts" count="40"/>
+	<ingredient name="resourceDuctTape" count="12"/>
+	<ingredient name="resourceScrapPolymers" count="10"/>
+	<ingredient name="resourceSpring" count="10"/>
+</recipe>
+
+<recipe name="M1" craft_area="workbench"  count="1" tags="learnable,perkAdvancedFirearms,firearmCrafting">
+	<ingredient name="resourceForgedSteel" count="75"/>
+	<ingredient name="resourceMechanicalParts" count="40"/>
+	<ingredient name="resourceDuctTape" count="15"/>
+	<ingredient name="resourceWood" count="200"/>
+	<ingredient name="resourceSpring" count="2"/>
+</recipe>
+
+<!--
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+									Large Weapons
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->
+
+<recipe name="M249 Saw" craft_area="workbench"  count="1" tags="learnable,perkAdvancedFirearms,firearmCrafting">
+	<ingredient name="resourceForgedSteel" count="200"/>
+	<ingredient name="resourceMechanicalParts" count="100"/>
+	<ingredient name="resourceDuctTape" count="50"/>
+	<ingredient name="resourceScrapPolymers" count="100"/>
+	<ingredient name="resourceSpring" count="25"/>
+</recipe>
+
+<!--
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+									AMMO
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->
+
+<recipe name="45ACP Bullet" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="resourceBulletTip" count="1"/>
+	<ingredient name="resourceGunPowder" count="2"/>
+	<ingredient name="resourceBulletCasing" count="1"/>
+</recipe>
+
+<!-- Shotguns  -->
+<recipe name="20 Gauge Shell" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="resourceBulletTip" count="1"/>
+	<ingredient name="resourceGunPowder" count="3"/>
+	<ingredient name="resourceBulletCasing" count="1"/>
+</recipe>
+
+<!-- Rifles  -->
+<recipe name="5.56mm Bullet" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="resourceBulletTip" count="1"/>
+	<ingredient name="resourceGunPowder" count="3"/>
+	<ingredient name="resourceBulletCasing" count="1"/>
+</recipe>
+
+<recipe name="7.62x39mm Bullet" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="resourceBulletTip" count="1"/>
+	<ingredient name="resourceGunPowder" count="3"/>
+	<ingredient name="resourceBulletCasing" count="1"/>
+</recipe>
+
+<recipe name="7.62x51mm Bullet" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="resourceBulletTip" count="1"/>
+	<ingredient name="resourceGunPowder" count="4"/>
+	<ingredient name="resourceBulletCasing" count="1"/>
+</recipe>
+
+<recipe name="50cal Bullet" count="1" craft_area="workbench" tags="learnable">
+	<ingredient name="resourceBulletTip" count="1"/>
+	<ingredient name="resourceGunPowder" count="5"/>
+	<ingredient name="resourceBulletCasing" count="1"/>
+</recipe>
+
+<!--
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+									SCRAP AMMO
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->
+
+<!-- Workbench:Ammo TO Resources  -->
+<recipe name="resourceGunPowder" count="3" craft_area="workbench">
+	<ingredient name="ScrapAmmo" count="1"/>
+</recipe>
+
+<recipe name="resourceBuckshot" count="1" craft_area="workbench">
+	<ingredient name="ScrapAmmo" count="1"/>
+</recipe>
+
+<recipe name="resourceBulletTip" count="1" craft_area="workbench">
+	<ingredient name="ScrapAmmo" count="1"/>
+</recipe>
+
+<recipe name="resourceBulletCasing" count="1" craft_area="workbench">
+	<ingredient name="ScrapAmmo" count="1"/>
+</recipe>
+
+<!-- Open World:Ammo TO Scrap Ammo  -->
+
+<recipe name="ScrapAmmo" count="1">
+	<ingredient name="45ACP Bullet" count="3"/>
+</recipe>
+
+<!-- Shotguns  -->
+<recipe name="ScrapAmmo" count="1">
+	<ingredient name="20 Gauge Shell" count="2"/>
+</recipe>
+
+<!-- Rifles  -->
+<recipe name="ScrapAmmo" count="1">
+	<ingredient name="7.62x39mm Bullet" count="2"/>
+</recipe>
+<recipe name="ScrapAmmo" count="1">
+	<ingredient name="5.56mm Bullet" count="3"/>
+</recipe>
+
+<!-- Large Weapons -->
+<recipe name="ScrapAmmo" count="1">
+	<ingredient name="7.62x51mm Bullet" count="1"/>
+</recipe>
+<recipe name="ScrapAmmo" count="1">
+	<ingredient name="50cal Bullet" count="1"/>
+</recipe>
+
+</append>
+</configs>

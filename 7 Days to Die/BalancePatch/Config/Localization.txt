@@ -1,0 +1,86 @@
+Key,Source,Context,Changes,English
+perkBerserkerDesc,progression,Perk,New,Specialize in two-handed melee weapons and beating the tar out of your opponents in a furious flurry of quick strikes.
+perkBerserkerName,progression,Perk,New,Berserker
+perkBerserkerRank1Desc,progression,Perk,New,Quick Hands
+perkBerserkerRank1LongDesc,progression,Perk,New,"You have developed quick hands. Two-handed melee attack speeds are increased by 5%.\n\nThis perk applies to sledgehammers, spears, pickaxes, fireaxes, and shovels."
+perkBerserkerRank2Desc,progression,Perk,New,Rapid Attacks
+perkBerserkerRank2LongDesc,progression,Perk,New,Your training allows you to perform rapid attacks. Two-handed melee attack speeds are increased by 10%.
+perkBerserkerRank3Desc,progression,Perk,New,Sudden Strike
+perkBerserkerRank3LongDesc,progression,Perk,New,You have developed the sudden strike. Two-handed melee attack speeds are increased by 15%.
+perkBerserkerRank4Desc,progression,Perk,New,Devastating Speed
+perkBerserkerRank4LongDesc,progression,Perk,New,You now perform attacks at devastating speeds. Two-handed melee attack speeds are increased by 20%.
+perkBerserkerRank5Desc,progression,Perk,New,Berserker
+perkBerserkerRank5LongDesc,progression,Perk,New,You have mastered the berserker. Two-handed melee attack speeds are increased by 25%.
+resourceForgedTitanium,items,Item,KgNone,Forged Titanium
+resourceForgedTitaniumDesc,items,Item,KgNone,Can be crafted at a workbench and used to make unique modifiers.
+resourceCobaltFragment,items,Item,KgNone,Cobalt Fragment
+resourceCobaltFragmentDesc,items,Item,KgNone,Found occasionally while mining resource nodes.
+resourceCobaltIngot,items,Item,KgNone,Cobalt Ingot
+resourceCobaltIngotDesc,items,Item,KgNone,Can be crafted at a workbench and is necessary to craft Forged Titanium.
+modGunSteelHammer,item_modifiers,mod,New,Steel Hammer Mod
+modGunSteelHammerDesc,item_modifiers,mod,New,Increases damage of any firearm by 30%.\nInstall into any firearm.
+modGunSteelHammerSchematic,item_modifiers,mod,New,Steel Hammer Mod Schematic
+modGunTitaniumHammer,item_modifiers,mod,New,Titanium Hammer Mod
+modGunTitaniumHammerDesc,item_modifiers,mod,New,Increases damage of any firearm by 60%.\nInstall into any firearm.
+modGunTitaniumHammerSchematic,item_modifiers,mod,New,Titanium Hammer Mod Schematic
+modGunBowHighTensionString,item_modifiers,mod,New,High Tension String Mod
+modGunBowHighTensionStringDesc,item_modifiers,mod,New,Increases damage of any bow or crossbow by 50%.\nInstall into any bow or crossbow.
+modGunBowHighTensionStringSchematic,item_modifiers,mod,New,High Tension String Mod Schematic
+modArmorTheDistance,item_modifiers,mod,New,Going The Distance
+modArmorTheDistanceDesc,item_modifiers,mod,New,[LEGENDARY] Going the Distance\nSignificantly improves movement of the user.\nInstall into any feet armor.
+modArmorTheDistanceSchematic,item_modifiers,mod,New,Going The Distance Mod Schematic
+modArmorMotionActuators,item_modifiers,mod,New,Motion Actuators
+modArmorMotionActuatorsDesc,item_modifiers,mod,New,[LEGENDARY] Motion Actuators\nSignificantly improves melee attack speed.\nInstall into any hands armor.
+modArmorMotionActuatorsSchematic,item_modifiers,mod,New,Motion Actuators Mod Schematic
+modMeleeBunkerBusterMk2,item_modifiers,mod,New,Bunker Buster Mk2 Mod
+modMeleeBunkerBusterMk2Desc,item_modifiers,mod,New,30% more damage against stone.
+modMeleeBunkerBusterMk2Schematic,item_modifiers,mod,New,Bunker Buster Mk2 Mod Schematic
+modMeleeIronBreakerMk2,item_modifiers,mod,New,Iron Breaker Mk2 Mod
+modMeleeIronBreakerMk2Desc,item_modifiers,mod,New,30% more damage against iron.
+modMeleeIronBreakerMk2Schematic,item_modifiers,mod,New,Iron Breaker Mk2 Mod Schematic
+modMeleeWoodSplitterMk2,item_modifiers,mod,New,Wood Splitter Mk2 Mod
+modMeleeWoodSplitterMk2Desc,item_modifiers,mod,New,30% more damage against wood.
+modMeleeWoodSplitterMk2Schematic,item_modifiers,mod,New,Wood Splitter Mk2 Mod Schematic
+modMeleeGraveDiggerMk2,item_modifiers,mod,New,Grave Digger Mk2 Mod
+modMeleeGraveDiggerMk2Desc,item_modifiers,mod,New,30% more damage against dirt.
+modMeleeGraveDiggerMk2Schematic,item_modifiers,mod,New,Grave Digger Mk2 Mod Schematic
+modMeleeErgonomicGripMk2,item_modifiers,mod,New,Ergonomic Grip Mk2 Mod
+modMeleeErgonomicGripMk2Desc,item_modifiers,mod,New,Decreases melee stamina usage by 20% and increases weapon handling of bows by 20%.
+modMeleeErgonomicGripMk2Schematic,item_modifiers,mod,New,Ergonomic Grip Mk2 Mod Schematic
+modMeleeStructuralBraceMk2,item_modifiers,mod,New,Structural Brace Mk2 Mod
+modMeleeStructuralBraceMk2Desc,item_modifiers,mod,New,This structural brace increases the damage durability on a melee weapon or tool.
+modMeleeStructuralBraceMk2Schematic,item_modifiers,mod,New,Structural Brace Mk2 Mod Schematic
+modGunForegripMk2,item_modifiers,mod,New,Foregrip Mk2 Mod
+modGunForegripMk2Desc,item_modifiers,mod,New,Improves handling and aiming accuracy.
+modGunForegripMk2Schematic,item_modifiers,mod,New,Foregrip Mk2 Mod Schematic
+modGunRetractingStockMk2,item_modifiers,mod,New,Retracting Stock Mk2 Mod
+modGunRetractingStockMk2Desc,item_modifiers,mod,New,Improves weapon handling while moving or firing from the hip because the weapon becomes more manageable in close quarters.
+modGunRetractingStockMk2Schematic,item_modifiers,mod,New,Retracting Stock Mk2 Mod Schematic
+modGunBipodMk2,item_modifiers,mod,New,Bipod Mk2 Mod
+modGunBipodMk2Desc,item_modifiers,mod,New,Increases aimed accuracy.
+modGunBipodMk2Schematic,item_modifiers,mod,New,Bipod Mk2 Mod Schematic
+modGunRodAndSpringMk2,item_modifiers,mod,New,Rod And Spring Mk2 Mod
+modGunRodAndSpringMk2Desc,item_modifiers,mod,New,Increases the rate of fire on self-loading weapons and increases recoil..
+modGunRodAndSpringMk2Schematic,item_modifiers,mod,New,Rod And Spring Mk2 Mod Schematic
+modGunBarrelExtenderMk2,item_modifiers,mod,New,Barrel Extender Mk2 Mod
+modGunBarrelExtenderMk2Desc,item_modifiers,mod,New,"Increases damage, range and aimed accuracy but makes the weapon more unwieldy when fired from the hip."
+modGunBarrelExtenderMk2Schematic,item_modifiers,mod,New,Barrel Extender Mk2 Mod Schematic
+modArmorCustomizedFittingsMk2,item_modifiers,mod,New,Customized Fittings Mk2 Mod
+modArmorCustomizedFittingsMk2Desc,item_modifiers,mod,New,Greatly decreases movement and stamina penalties from armor.
+modArmorCustomizedFittingsMk2Schematic,item_modifiers,mod,New,Customized Fittings Mk2 Mod Schematic
+modArmorTitaniumPlating,item_modifiers,mod,New,Titanium Plating Mod
+modArmorTitaniumPlatingDesc,item_modifiers,mod,New,Improve your armor rating with these additional armor plates. Can be installed in any armor.
+modArmorTitaniumPlatingSchematic,item_modifiers,mod,New,Titanium Plating Mod Schematic
+meleeToolPickaxeTitanium,items,Tool,KgNone,Mordenak's Titanium Pickaxe
+meleeToolPickaxeTitaniumDesc,items,Tool,KgNone,"Mordenak's Titanium Pickaxe is a rare and powerful artifact.\n\nRepair with a Repair Kit."
+meleeWpnSledgeTitanium,items,Tool,KgNone,Mordenak's Titanium Sledgehammer
+meleeWpnSledgeTitaniumDesc,items,Tool,KgNone,"Mordenak's Titanium Sledgehammer is a rare and powerful artifact.\n\nRepair with a Repair Kit."
+perkTurretCommanderDesc,progression,Perk,New,Specialize in turrets
+perkTurretCommanderName,progression,Perk,New,Turret Commander
+perkTurretCommanderRank1Desc,progression,Perk,New,Sergeant Commander
+perkTurretCommanderRank1LongDesc,progression,Perk,New,You can now have 1 additional turret active, +10 mag size, 10% faster reload
+perkTurretCommanderRank2Desc,progression,Perk,New,Lieutenant Commander
+perkTurretCommanderRank2LongDesc,progression,Perk,New,You can now have 1 additional turret active, +30 mag size, 20% faster reload
+perkTurretCommanderRank3Desc,progression,Perk,New,Master Commander
+perkTurretCommanderRank3LongDesc,progression,Perk,New,You can now have 1 additional turret active, +50 mag size, 30% faster reload
+ammoArrowTitanium,items,Ammo,KgNone,Titanium Arrow

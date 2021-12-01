@@ -8,6 +8,21 @@
 		<baseCost>2000</baseCost>
 		<techLevel>Medieval</techLevel>
 		<prerequisites></prerequisites>
+		<tab>Extended</tab>
+		<researchViewX>0.00</researchViewX>
+    	<researchViewY>0.0</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>enrichSoil</defName>
+		<label>Enrich Soil</label>
+		<description>Learn how to enrich regular soil and turn it into Rich Soil.</description>
+		<baseCost>6000</baseCost>
+		<techLevel>Medieval</techLevel>
+		<prerequisites><li>stoneToSoil</li></prerequisites>
+		<tab>Extended</tab>
+		<researchViewX>1.00</researchViewX>
+    	<researchViewY>0.0</researchViewY>
 	</ResearchProjectDef>
 
 </Defs>

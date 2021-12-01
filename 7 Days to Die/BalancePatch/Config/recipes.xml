@@ -1,92 +1,144 @@
 <configs>
 
+	<!-- A18 Reduce increasing resource cost based on quality level -->
+	
+	<!-- <set xpath="/recipes/recipe/effect_group/passive_effect[@name='CraftingIngredientCount']/@value">0,2</set> -->
+
+	<!-- Remove meleeToolAllSteelParts from all recipes -->
+	<remove xpath="/recipes/recipe/ingredient[@name='meleeToolAllSteelParts']" />
+	<set xpath="/recipes/recipe[@name='meleeToolPickT2SteelPickaxe']/ingredient[@name='resourceForgedSteel']/@count">20</set>
+	<set xpath="/recipes/recipe[@name='meleeToolPickT2SteelPickaxe']/effect_group/passive_effect/@tags">resourceForgedSteel,resourceWood,resourceLeather,resourceDuctTape</set>
+	<set xpath="/recipes/recipe[@name='meleeToolShovelT2SteelShovel']/ingredient[@name='resourceForgedSteel']/@count">20</set>
+	<set xpath="/recipes/recipe[@name='meleeToolShovelT2SteelShovel']/effect_group/passive_effect/@tags">resourceForgedSteel,resourceWood,resourceLeather,resourceDuctTape</set>
+	<set xpath="/recipes/recipe[@name='meleeToolAxeT2SteelAxe']/ingredient[@name='resourceForgedSteel']/@count">20</set>
+	<set xpath="/recipes/recipe[@name='meleeToolAxeT2SteelAxe']/effect_group/passive_effect/@tags">resourceForgedSteel,resourceWood,resourceLeather,resourceDuctTape</set>
+
+	<!-- Remove armorMilitarySetParts from all recipes -->
+	<remove xpath="/recipes/recipe/ingredient[@name='armorMilitarySetParts']" />
+	<set xpath="/recipes/recipe[@name='armorMilitaryBoots']/ingredient[@name='resourceMilitaryFiber']/@count">5</set>
+	<set xpath="/recipes/recipe[@name='armorMilitaryBoots']/effect_group/passive_effect/@tags">resourceMilitaryFiber,resourceLeather,resourceDuctTape</set>
+	<set xpath="/recipes/recipe[@name='armorMilitaryVest']/ingredient[@name='resourceMilitaryFiber']/@count">5</set>
+	<set xpath="/recipes/recipe[@name='armorMilitaryVest']/effect_group/passive_effect/@tags">resourceMilitaryFiber,resourceLeather,resourceDuctTape</set>
+	<set xpath="/recipes/recipe[@name='armorMilitaryGloves']/ingredient[@name='resourceMilitaryFiber']/@count">5</set>
+	<set xpath="/recipes/recipe[@name='armorMilitaryGloves']/effect_group/passive_effect/@tags">resourceMilitaryFiber,resourceLeather,resourceDuctTape</set>
+	<set xpath="/recipes/recipe[@name='armorMilitaryHelmet']/ingredient[@name='resourceMilitaryFiber']/@count">5</set>
+	<set xpath="/recipes/recipe[@name='armorMilitaryHelmet']/effect_group/passive_effect/@tags">resourceMilitaryFiber,resourceLeather,resourceDuctTape</set>
+	<set xpath="/recipes/recipe[@name='armorMilitaryLegs']/ingredient[@name='resourceMilitaryFiber']/@count">5</set>
+	<set xpath="/recipes/recipe[@name='armorMilitaryLegs']/effect_group/passive_effect/@tags">resourceMilitaryFiber,resourceLeather,resourceDuctTape</set>
+
+	<!-- Remove armorSteelSetParts from all recipes -->
+	<remove xpath="/recipes/recipe/ingredient[@name='armorSteelSetParts']" />
+	<set xpath="/recipes/recipe[@name='armorSteelBoots']/ingredient[@name='resourceForgedSteel']/@count">20</set>
+	<set xpath="/recipes/recipe[@name='armorSteelBoots']/effect_group/passive_effect/@tags">resourceForgedSteel,resourceLeather,resourceDuctTape</set>
+	<set xpath="/recipes/recipe[@name='armorSteelChest']/ingredient[@name='resourceForgedSteel']/@count">20</set>
+	<set xpath="/recipes/recipe[@name='armorSteelChest']/effect_group/passive_effect/@tags">resourceForgedSteel,resourceLeather,resourceDuctTape</set>
+	<set xpath="/recipes/recipe[@name='armorSteelGloves']/ingredient[@name='resourceForgedSteel']/@count">20</set>
+	<set xpath="/recipes/recipe[@name='armorSteelGloves']/effect_group/passive_effect/@tags">resourceForgedSteel,resourceLeather,resourceDuctTape</set>
+	<set xpath="/recipes/recipe[@name='armorSteelHelmet']/ingredient[@name='resourceForgedSteel']/@count">20</set>
+	<set xpath="/recipes/recipe[@name='armorSteelHelmet']/effect_group/passive_effect/@tags">resourceForgedSteel,resourceLeather,resourceDuctTape</set>
+	<set xpath="/recipes/recipe[@name='armorSteelLegs']/ingredient[@name='resourceForgedSteel']/@count">20</set>
+	<set xpath="/recipes/recipe[@name='armorSteelLegs']/effect_group/passive_effect/@tags">resourceForgedSteel,resourceLeather,resourceDuctTape</set>
+
+	<!-- Make Bacon and Eggs use less egg -->
+	<set xpath="/recipes/recipe[@name='foodBaconAndEggs']/ingredient[@name='foodEgg']/@count">1</set>
+
 	<append xpath="/recipes">
 
-		<recipe name="Cobalt Ingot" count="1" craft_area="workbench">
+		<!-- Make Barbed Wire Sheets craftable again -->
+		<recipe name="barbedWireSheet" count="1"> <!-- trap -->
+			<ingredient name="resourceScrapIron" count="20"/>
+		</recipe>
+
+		<!-- <recipe name="Cobalt Ingot" count="1" craft_area="workbench">
 			<ingredient name="High Quality Metal Fragments" count="100"/>
+			<ingredient name="resourceForgedIron" count="20"/>
+			<ingredient name="resourceMechanicalParts" count="5"/>
+		</recipe> -->
+
+		<recipe name="resourceCobaltIngot" count="1" craft_area="workbench" craft_time="30">
+			<ingredient name="resourceForgedIron" count="20"/>
+			<ingredient name="resourceCobaltFragment" count="20"/>
 		</recipe>
 
-		<recipe name="Cobalt Ingot" count="1" craft_area="workbench">
-			<ingredient name="Cobalt Fragment" count="4"/>
-		</recipe>
-
-		<recipe name="Forged Titanium" count="1" craft_area="workbench">
+		<recipe name="resourceForgedTitanium" count="1" craft_area="workbench" craft_time="60">
 			<ingredient name="resourceForgedSteel" count="100"/>
-			<ingredient name="Cobalt Ingot" count="2"/>
+			<ingredient name="resourceMechanicalParts" count="20"/>
+			<ingredient name="resourceScrapPolymers" count="10"/>
+			<ingredient name="resourceCobaltIngot" count="1"/>
 		</recipe>
 
-		<recipe name="Kevlar Mesh" count="1" craft_area="workbench">
+		<recipe name="ammoArrowTitanium" count="250" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceForgedTitanium" count="1"/>
+			<ingredient name="resourceScrapPolymers" count="20"/>
+		</recipe>
+
+		<!-- <recipe name="Kevlar Mesh" count="1" craft_area="workbench">
 			<ingredient name="resourceMilitaryFiber" count="50"/>
-		</recipe>
+		</recipe> -->
 
-		<recipe name="Bunker Buster Mk 2" count="1" craft_area="workbench">
+		<recipe name="modMeleeBunkerBusterMk2" count="1" craft_area="workbench">
 			<ingredient name="modMeleeBunkerBuster" count="1"/>
-			<ingredient name="Forged Titanium" count="1"/>
+			<ingredient name="resourceForgedTitanium" count="1"/>
 		</recipe>
 
-		<recipe name="Iron Breaker Mk 2" count="1" craft_area="workbench">
+		<recipe name="modMeleeIronBreakerMk2" count="1" craft_area="workbench">
 			<ingredient name="modMeleeIronBreaker" count="1"/>
-			<ingredient name="Forged Titanium" count="1"/>
+			<ingredient name="resourceForgedTitanium" count="1"/>
 		</recipe>
 
-		<recipe name="Wood Splitter Mk 2" count="1" craft_area="workbench">
+		<recipe name="modMeleeWoodSplitterMk2" count="1" craft_area="workbench">
 			<ingredient name="modMeleeWoodSplitter" count="1"/>
-			<ingredient name="Forged Titanium" count="1"/>
+			<ingredient name="resourceForgedTitanium" count="1"/>
 		</recipe>
 
-		<recipe name="Grave Digger Mk 2" count="1" craft_area="workbench">
+		<recipe name="modMeleeGraveDiggerMk2" count="1" craft_area="workbench">
 			<ingredient name="modMeleeGraveDigger" count="1"/>
-			<ingredient name="Forged Titanium" count="1"/>
+			<ingredient name="resourceForgedTitanium" count="1"/>
 		</recipe>
 
-		<recipe name="Foregrip Mk 2" count="1" craft_area="workbench">
+		<recipe name="modGunForegripMk2" count="1" craft_area="workbench">
 			<ingredient name="modGunForegrip" count="1"/>
-			<ingredient name="Forged Titanium" count="1"/>
+			<ingredient name="resourceForgedTitanium" count="1"/>
 		</recipe>
 
-		<recipe name="Retracting Stock Mk 2" count="1" craft_area="workbench">
+		<recipe name="modGunRetractingStockMk2" count="1" craft_area="workbench">
 			<ingredient name="modGunRetractingStock" count="1"/>
-			<ingredient name="Forged Titanium" count="1"/>
+			<ingredient name="resourceForgedTitanium" count="1"/>
 		</recipe>
 
-		<recipe name="Bipod Mk 2" count="1" craft_area="workbench">
+		<recipe name="modGunBipodMk2" count="1" craft_area="workbench">
 			<ingredient name="modGunBipod" count="1"/>
-			<ingredient name="Forged Titanium" count="1"/>
+			<ingredient name="resourceForgedTitanium" count="1"/>
 		</recipe>
 
-		<recipe name="Rod And Spring Mk 2" count="1" craft_area="workbench">
+		<!-- <recipe name="modGunRodAndSpringMk2" count="1" craft_area="workbench">
 			<ingredient name="modGunRodAndSpring" count="1"/>
-			<ingredient name="Forged Titanium" count="1"/>
+			<ingredient name="resourceForgedTitanium" count="1"/>
+		</recipe> -->
+
+		<recipe name="modGunBarrelExtenderMk2" count="1" craft_area="workbench">
+			<ingredient name="modGunBarrelExtender" count="1"/>
+			<ingredient name="resourceForgedTitanium" count="1"/>
 		</recipe>
 
-		<recipe name="Customized Fittings Mk 2" count="1" craft_area="workbench">
+		<recipe name="modArmorCustomizedFittingsMk2" count="1" craft_area="workbench">
 			<ingredient name="modArmorCustomizedFittings" count="1"/>
-			<ingredient name="Kevlar Mesh" count="1"/>
+			<ingredient name="resourceForgedTitanium" count="1"/>
 		</recipe>
 
-		<recipe name="Kevlar Plating" count="1" craft_area="workbench">
-			<ingredient name="modArmorMilitaryPlating" count="1"/>
-			<ingredient name="Kevlar Mesh" count="1"/>
+		<recipe name="modArmorTitaniumPlating" count="1" craft_area="workbench">
+			<ingredient name="modArmorPlatingReinforced" count="1"/>
+			<ingredient name="resourceForgedTitanium" count="1"/>
 		</recipe>
 
-		<recipe name="Titanium Plating" count="1" craft_area="workbench">
-			<ingredient name="modArmorSteelPlating" count="1"/>
-			<ingredient name="Forged Titanium" count="1"/>
-		</recipe>
-
-		<recipe name="Ergonomic Grip Mk 2" count="1" craft_area="workbench">
+		<recipe name="modMeleeErgonomicGripMk2" count="1" craft_area="workbench">
 			<ingredient name="modMeleeErgonomicGrip" count="1"/>
-			<ingredient name="Forged Titanium" count="1"/>
+			<ingredient name="resourceForgedTitanium" count="1"/>
 		</recipe>
 
-		<recipe name="Structural Brace Mk 2" count="1" craft_area="workbench">
+		<recipe name="modMeleeStructuralBraceMk2" count="1" craft_area="workbench">
 			<ingredient name="modMeleeStructuralBrace" count="1"/>
-			<ingredient name="Forged Titanium" count="1"/>
-		</recipe>
-
-		<recipe name="Steel Sledgehammer" count="1" craft_area="workbench">
-			<ingredient name="resourceForgedSteel" count="30"/>
-			<ingredient name="resourceWood" count="10"/>
+			<ingredient name="resourceForgedTitanium" count="1"/>
 		</recipe>
 
 	</append>

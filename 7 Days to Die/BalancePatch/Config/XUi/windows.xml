@@ -1,0 +1,23 @@
+<configs>
+	<set xpath="/windows/window[@name='windowTargetBar']/@visibility">always</set>
+
+	<!-- Backpack adjustments -->
+	<set xpath="/windows/window[@name='windowBackpack']/@width">604</set>
+	<set xpath="/windows/window[@name='windowBackpack']/@height">373</set>
+	<set xpath="/windows/window[@name='windowBackpack']/panel[@name='content']/@height">330</set>
+	<set xpath="/windows/window[@name='windowBackpack']/panel[@name='content']/sprite[@name='backgroundMain']/@width">601</set>
+	<set xpath="/windows/window[@name='windowBackpack']/panel[@name='content']/sprite[@name='backgroundMain']/@height">363</set>
+	<set xpath="/windows/window[@name='windowBackpack']/panel[@name='content']/grid[@name='inventory']/@rows">6</set>
+	<set xpath="/windows/window[@name='windowBackpack']/panel[@name='content']/grid[@name='inventory']/@cols">10</set>
+	<set xpath="/windows/window[@name='windowBackpack']/panel[@name='content']/grid[@name='inventory']/@cell_height">60</set>
+	<set xpath="/windows/window[@name='windowBackpack']/panel[@name='content']/grid[@name='inventory']/@cell_width">60</set>
+
+	<set xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid[@name='queue']/@rows">10</set>
+	<set xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid[@name='queue']/@cols">10</set>
+
+	<remove xpath="/windows/window[@name='windowBackpack']/panel[@name='content']/grid[@name='inventory']/backpack_item_stack"></remove>
+	
+	<append xpath="/windows/window[@name='windowBackpack']/panel[@name='content']/grid[@name='inventory']">
+       <kh60_backpack_item_stack name="0"/>
+	</append>
+</configs>

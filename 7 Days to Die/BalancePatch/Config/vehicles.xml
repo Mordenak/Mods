@@ -2,11 +2,20 @@
 
 	<!-- Make the motorcycle a little faster... -->
 	<set xpath="/vehicles/vehicle[@name='vehicleMotorcycle']/property[@name='velocityMax']/@value">17, 27</set>
+	<!-- Reduce steer -->
+	<!-- <set xpath="/vehicles/vehicle[@name='vehicleMotorcycle']/property[@name='steerAngleMax']/@value">20</set> -->
+	<set xpath="/vehicles/vehicle[@name='vehicleMotorcycle']/property[@name='steerRate']/@value">120</set>
+	<set xpath="/vehicles/vehicle[@name='vehicleMotorcycle']/property[@name='steerCenteringRate']/@value">180</set>
+	<set xpath="/vehicles/vehicle[@name='vehicleMotorcycle']/property[@name='tiltAngleMax']/@value">30</set>
+	<set xpath="/vehicles/vehicle[@name='vehicleMotorcycle']/property[@name='tiltDampening']/@value">.5</set>
+	<!-- Better MPG? -->
+	<set xpath="/vehicles/vehicle[@name='vehicleMotorcycle']/property[@class='engine']/property[@name='fuelKmPerL']/@value">.4</set>
 
 	<!-- Probably do the same for the Jeep -->
 	<set xpath="/vehicles/vehicle[@name='vehicle4x4Truck']/property[@name='velocityMax']/@value">20, 30</set>
 
 	<!-- And the Gyro... -->
-	<set xpath="/vehicles/vehicle[@name='vehicleGyrocopter']/property[@name='velocityMax']/@value">15, 25</set>
+	<set xpath="/vehicles/vehicle[@name='vehicleGyrocopter']/property[@name='velocityMax']/@value">45, 65</set>
+	<!-- Make it REALLY fast??? -->
 
 </configs>

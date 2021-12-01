@@ -1,3 +1,19 @@
 <configs>
-	<set xpath="/buffs/buff[@name='buffNearDeathTrauma']/duration/@value">300</set>
+	<!-- <set xpath="/buffs/buff[@name='buffNearDeathTrauma']/duration/@value">300</set> -->
+
+	<!-- Remove Beer screen effect -->
+	<remove xpath="/buffs/buff[@name='buffBeer']/effect_group/triggered_effect[@action='ModifyScreenEffect']" />
+
+	<!-- New stuff -->
+
+	<append xpath="/buffs">
+		<buff name="buffActuators" hidden="true">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<effect_group>
+				<passive_effect name="AttacksPerMinute" operation="perc_add" value=".3"/>
+			</effect_group>
+		</buff>
+	</append>
+
 </configs>
